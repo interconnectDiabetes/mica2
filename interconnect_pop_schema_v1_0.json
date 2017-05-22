@@ -1,0 +1,120 @@
+{
+  "type": "object",
+  "properties": {
+    "info": {
+      "type": "object",
+      "format": "localizedString"
+    },
+    "recruitment": {
+      "type": "object",
+      "properties": {
+        "info": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(study.recruitment-sources.info)"
+        },
+        "dataSources": {
+          "type": "array",
+          "title": "t(study_taxonomy.vocabulary.populations-recruitment-dataSources.title)",
+          "default": [],
+          "items": {
+            "type": "string",
+            "enum": [
+              "general_population",
+              "specific_population",
+              "exist_studies",
+              "other"
+            ]
+          }
+        },
+        "specificPopulationSources": {
+          "type": "array",
+          "title": "t(study.recruitment-sources.specific-population)",
+          "items": {
+            "type": "string",
+            "enum": [
+              "clinic_patients",
+              "specific_association",
+              "other"
+            ]
+          }
+        },
+        "otherSpecificPopulationSource": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(study.recruitment-sources.other-specific-population)"
+        },
+        "otherSource": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(study.recruitment-sources.other)"
+        }
+      }
+    },
+    "selectionCriteria": {
+      "type": "object",
+      "properties": {
+        "gender": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "enum": [
+            "women_men",
+            "women",
+			"men"
+          ],
+          "title": "t(study_taxonomy.vocabulary.populations-selectionCriteria-gender.title)"
+        },
+        "ageMin": {
+          "type": "number",
+          "title": "t(population.ageMin)"
+        },
+        "ageMax": {
+          "type": "number",
+          "title": "t(population.ageMax)"
+        },
+        "otherCriteria": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(population.otherCriteria)"
+        },
+        "countriesIso": {
+          "type": "array",
+          "format": "obibaCountriesUiSelect",
+          "title": "t(population.countries)"
+        },
+        "areaResidence": {
+          "title": "t(study_taxonomy.vocabulary.populations-selectionCriteria-areaResidence.title)",
+          "type": "string",
+            "enum": [
+              "urban_rural",
+              "urban",
+              "rural"
+            ] 
+        },
+        "healthStatus": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "format": "localizedString"
+          },
+          "title": "t(study.selection-criteria.health-status)"
+        },
+        "criteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "gravidity",
+              "newborn",
+              "migrant"
+            ]
+          },
+          "title": "t(study_taxonomy.vocabulary.populations-selectionCriteria-criteria.title)"
+        }
+      }
+    }
+  },
+  "required": []
+}

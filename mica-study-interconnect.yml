@@ -1,0 +1,2043 @@
+"name": "Mica_study"
+"title":
+  "en": "Study properties"
+  "fr": "Propriétés des étude"
+"description":
+  "en": "Study properties as defined in the catalogue."
+  "fr": "Propriétés des études telles que définies dans le catalogue."
+"keywords": {}
+"license": "CC BY-NC 4.0"
+"vocabularies":
+- "name": "id"
+  "title":
+    "en": "Acronym"
+    "fr": "Acronyme"
+  "description":
+    "en": "Acronym of the study."
+    "fr": "Acronyme de l'étude."
+  "terms": []
+  "attributes":
+    "static": "true"
+- "name": "objectives"
+  "title":
+    "en": "Objectives"
+    "fr": "Objectifs"
+  "description":
+    "en": "Study objectives."
+    "fr": "Objectifs de l'étude."
+  "terms": []
+  "attributes":
+    "field": "objectives.und"
+    "alias": "objectives"
+    "static": "true"
+    "localized": "true"
+- "name": "methods-design"
+  "title":
+    "en": "Study design"
+    "fr": "Définitions d'étude"
+  "description":
+    "en": "The design of an observational or experimental study that defined recruitment (e.g. cohort, case control)."
+    "fr": "La conception d'une étude observationnelle ou interventionnelle (e.g. cohorte, cas-témoins)."
+  "attributes":
+    "field": "model.methods.design"
+    "alias": "model-methods-design"
+  "terms":
+  - "name": "cohort_study"
+    "title":
+      "en": "Cohort"
+      "fr": "Étude de cohorte"
+    "description":
+      "en": "Observational study where one or more defined population are followed prospectively to determine the incidence of diseases or health outcomes in relation to certain risk factors."
+      "fr": "Étude observationnelle où une ou plusieurs populations définies sont suivies de façon prospective afin de déterminer l'incidence des maladies ou des résultats de santé en relation avec certains facteurs de risque."
+  - "name": "case_control"
+    "title":
+      "en": "Case-control"
+      "fr": "Cas-témoins"
+    "description":
+      "en": "Observational study that compares participants who have an outcome interest (cases) with participants who do not have the outcome (controls) to assess the impact of their past exposure to certain risk factors."
+      "fr": "Étude observationnelle qui compare le participants qui ont un résultat d'intérêt (cas) avec les participants qui ne possèdent pas ce résultat (contrôles) por évaluer l'impact de leur exposition passée à certains facteurs de risque."
+  - "name": "case_only"
+    "title":
+      "en": "Case only"
+      "fr": "Cas"
+    "description":
+      "en": "Observational study that describes and investigates a population pesenting a specific disease or outcome (cases)."
+      "fr": "Étude observationnelle qui décrit et étudie une population présentant une maladie ou un résultat spécifique (cas)."
+  - "name": "cross_sectional"
+    "title":
+      "en": "Cross-sectional"
+      "fr": "Analyse transversale"
+    "description":
+      "en": "Observational study that involves the analysis of data collected from a population at one specific point in time."
+      "fr": "Étude observationnelle qui implique l'analyse des données recueillies sur une population à un moment précis dans le temps."
+  - "name": "clinical_trial"
+    "title":
+      "en": "Clinical trial / Intervention trial"
+      "fr": "Essai clinique"
+    "description":
+      "en": "Experimental study in which participants are randomly assigned into an experimental group or a control group to evaluate the effect of a certain intervention on the outcome being studied."
+      "fr": "Étude expérimentale dans laquelle les participants sont assignés aléatoirement à un groupe expérimentale ou à un groupe contrôle afin d'évaluer l'effet d'une certaine intervention sur les résultats en cours d'étude."
+  - "name": "other"
+    "title":
+      "en": "Other"
+      "fr": "Autre"
+    "description":
+      "en": "Other study design."
+- "name": "investigator"
+  "title":
+    "en": "Investigator name"
+    "fr": "Nom de l'investigateur"
+  "description":
+    "en": "Investigator full name."
+    "fr": "Nom complet de l'investigateur."
+  "attributes":
+    "field": "memberships.investigator.person.fullName"
+    "alias": "memberships-investigator-person-fullName"
+    "static": "true"
+- "name": "investigator-institution"
+  "title":
+    "en": "Investigator institution"
+    "fr": "Institution de l'investigateur"
+  "description":
+    "en": "Investigator institution name."
+    "fr": "Nom de l'institution de l'investigateur."
+  "attributes":
+    "field": "memberships.investigator.person.institution.name.und"
+    "alias": "memberships-investigator-person-institution-name"
+    "static": "true"
+    "localized": "true"
+- "name": "contact"
+  "title":
+    "en": "Contact name"
+    "fr": "Nom du contact"
+  "description":
+    "en": "Contact full name."
+    "fr": "Nom complet du contact."
+  "attributes":
+    "field": "memberships.contact.person.fullName"
+    "alias": "memberships-contact-person-fullName"
+    "static": "true"
+- "name": "contact-institution"
+  "title":
+    "en": "Contact institution"
+    "fr": "Institution du contact"
+  "description":
+    "en": "Contact institution name."
+    "fr": "Nom de l'institution du contact."
+  "attributes":
+    "field": "memberships.contact.person.institution.name.und"
+    "alias": "memberships-contact-person-institution-name"
+    "localized": "true"
+- "name": "populations-selectionCriteria-countriesIso"
+  "title":
+    "en": "Selection criteria - Country of residence"
+    "fr": "Critères de sélection - Pays de résidence"
+  "description":
+    "en": "Participant’s country of residence."
+  "attributes":
+    "field": "populations.model.selectionCriteria.countriesIso"
+    "alias": "populations-model-selectionCriteria-countriesIso"
+  "repeatable": "true"
+  "terms":
+  - "name": "AND"
+    "title":
+      "en": "Andorra"
+      "fr": "Andorre"
+    "description": {}
+  - "name": "ARE"
+    "title":
+      "en": "United Arab Emirates"
+      "fr": "Émirats arabes unis"
+    "description": {}
+  - "name": "AFG"
+    "title":
+      "en": "Afghanistan"
+      "fr": "Afghanistan"
+    "description": {}
+  - "name": "ATG"
+    "title":
+      "en": "Antigua and Barbuda"
+      "fr": "Antigua-et-Barbuda"
+    "description": {}
+  - "name": "AIA"
+    "title":
+      "en": "Anguilla"
+      "fr": "Anguilla"
+    "description": {}
+  - "name": "ALB"
+    "title":
+      "en": "Albania"
+      "fr": "Albanie"
+    "description": {}
+  - "name": "ARM"
+    "title":
+      "en": "Armenia"
+      "fr": "Arménie"
+    "description": {}
+  - "name": "AGO"
+    "title":
+      "en": "Angola"
+      "fr": "Angola"
+    "description": {}
+  - "name": "ATA"
+    "title":
+      "en": "Antarctica"
+      "fr": "Antarctique"
+    "description": {}
+  - "name": "ARG"
+    "title":
+      "en": "Argentina"
+      "fr": "Argentine"
+    "description": {}
+  - "name": "ASM"
+    "title":
+      "en": "American Samoa"
+      "fr": "Samoa américaines"
+    "description": {}
+  - "name": "AUT"
+    "title":
+      "en": "Austria"
+      "fr": "Autriche"
+    "description": {}
+  - "name": "AUS"
+    "title":
+      "en": "Australia"
+      "fr": "Australie"
+    "description": {}
+  - "name": "ABW"
+    "title":
+      "en": "Aruba"
+      "fr": "Aruba"
+    "description": {}
+  - "name": "ALA"
+    "title":
+      "en": "Åland Islands"
+      "fr": "Îles Åland"
+    "description": {}
+  - "name": "AZE"
+    "title":
+      "en": "Azerbaijan"
+      "fr": "Azerbaïdjan"
+    "description": {}
+  - "name": "BIH"
+    "title":
+      "en": "Bosnia and Herzegovina"
+      "fr": "Bosnie-Herzégovine"
+    "description": {}
+  - "name": "BRB"
+    "title":
+      "en": "Barbados"
+      "fr": "Barbade"
+    "description": {}
+  - "name": "BGD"
+    "title":
+      "en": "Bangladesh"
+      "fr": "Bangladesh"
+    "description": {}
+  - "name": "BEL"
+    "title":
+      "en": "Belgium"
+      "fr": "Belgique"
+    "description": {}
+  - "name": "BFA"
+    "title":
+      "en": "Burkina Faso"
+      "fr": "Burkina Faso"
+    "description": {}
+  - "name": "BGR"
+    "title":
+      "en": "Bulgaria"
+      "fr": "Bulgarie"
+    "description": {}
+  - "name": "BHR"
+    "title":
+      "en": "Bahrain"
+      "fr": "Bahreïn"
+    "description": {}
+  - "name": "BDI"
+    "title":
+      "en": "Burundi"
+      "fr": "Burundi"
+    "description": {}
+  - "name": "BEN"
+    "title":
+      "en": "Benin"
+      "fr": "Bénin"
+    "description": {}
+  - "name": "BLM"
+    "title":
+      "en": "Saint Barthélemy"
+      "fr": "Saint-Barthélemy"
+    "description": {}
+  - "name": "BMU"
+    "title":
+      "en": "Bermuda"
+      "fr": "Bermudes"
+    "description": {}
+  - "name": "BRN"
+    "title":
+      "en": "Brunei Darussalam"
+      "fr": "Brunei"
+    "description": {}
+  - "name": "BOL"
+    "title":
+      "en": "Bolivia"
+      "fr": "Bolivie"
+    "description": {}
+  - "name": "BES"
+    "title":
+      "en": "Bonaire, Sint Eustatius and Saba"
+      "fr": "Pays-Bas caribéens"
+    "description": {}
+  - "name": "BRA"
+    "title":
+      "en": "Brazil"
+      "fr": "Brésil"
+    "description": {}
+  - "name": "BHS"
+    "title":
+      "en": "Bahamas"
+      "fr": "Bahamas"
+    "description": {}
+  - "name": "BTN"
+    "title":
+      "en": "Bhutan"
+      "fr": "Bhoutan"
+    "description": {}
+  - "name": "BVT"
+    "title":
+      "en": "Bouvet Island"
+      "fr": "Île Bouvet"
+    "description": {}
+  - "name": "BWA"
+    "title":
+      "en": "Botswana"
+      "fr": "Botswana"
+    "description": {}
+  - "name": "BLR"
+    "title":
+      "en": "Belarus"
+      "fr": "Biélorussie"
+    "description": {}
+  - "name": "BLZ"
+    "title":
+      "en": "Belize"
+      "fr": "Belize"
+    "description": {}
+  - "name": "CAN"
+    "title":
+      "en": "Canada"
+      "fr": "Canada"
+    "description": {}
+  - "name": "CCK"
+    "title":
+      "en": "Cocos (Keeling) Islands"
+      "fr": "Îles Cocos"
+    "description": {}
+  - "name": "COD"
+    "title":
+      "en": "Congo, the Democratic Republic of the"
+      "fr": "République démocratique du Congo"
+    "description": {}
+  - "name": "CAF"
+    "title":
+      "en": "Central African Republic"
+      "fr": "République centrafricaine"
+    "description": {}
+  - "name": "COG"
+    "title":
+      "en": "Congo"
+      "fr": "République du Congo"
+    "description": {}
+  - "name": "CHE"
+    "title":
+      "en": "Switzerland"
+      "fr": "Suisse"
+    "description": {}
+  - "name": "CIV"
+    "title":
+      "en": "Côte d'Ivoire"
+      "fr": "Côte d'Ivoire"
+    "description": {}
+  - "name": "COK"
+    "title":
+      "en": "Cook Islands"
+      "fr": "Îles Cook"
+    "description": {}
+  - "name": "CHL"
+    "title":
+      "en": "Chile"
+      "fr": "Chili"
+    "description": {}
+  - "name": "CMR"
+    "title":
+      "en": "Cameroon"
+      "fr": "Cameroun"
+    "description": {}
+  - "name": "CHN"
+    "title":
+      "en": "China"
+      "fr": "Chine"
+    "description": {}
+  - "name": "COL"
+    "title":
+      "en": "Colombia"
+      "fr": "Colombie"
+    "description": {}
+  - "name": "CRI"
+    "title":
+      "en": "Costa Rica"
+      "fr": "Costa Rica"
+    "description": {}
+  - "name": "CUB"
+    "title":
+      "en": "Cuba"
+      "fr": "Cuba"
+    "description": {}
+  - "name": "CPV"
+    "title":
+      "en": "Cabo Verde"
+      "fr": "Cap-Vert"
+    "description": {}
+  - "name": "CUW"
+    "title":
+      "en": "Curaçao"
+      "fr": "Curaçao"
+    "description": {}
+  - "name": "CXR"
+    "title":
+      "en": "Christmas Island"
+      "fr": "Île Christmas"
+    "description": {}
+  - "name": "CYP"
+    "title":
+      "en": "Cyprus"
+      "fr": "Chypre"
+    "description": {}
+  - "name": "CZE"
+    "title":
+      "en": "Czech Republic"
+      "fr": "République tchèque"
+    "description": {}
+  - "name": "DEU"
+    "title":
+      "en": "Germany"
+      "fr": "Allemagne"
+    "description": {}
+  - "name": "DJI"
+    "title":
+      "en": "Djibouti"
+      "fr": "Djibouti"
+    "description": {}
+  - "name": "DNK"
+    "title":
+      "en": "Denmark"
+      "fr": "Danemark"
+    "description": {}
+  - "name": "DMA"
+    "title":
+      "en": "Dominica"
+      "fr": "Dominique"
+    "description": {}
+  - "name": "DOM"
+    "title":
+      "en": "Dominican Republic"
+      "fr": "République dominicaine"
+    "description": {}
+  - "name": "DZA"
+    "title":
+      "en": "Algeria"
+      "fr": "Algérie"
+    "description": {}
+  - "name": "ECU"
+    "title":
+      "en": "Ecuador"
+      "fr": "Équateur"
+    "description": {}
+  - "name": "EST"
+    "title":
+      "en": "Estonia"
+      "fr": "Estonie"
+    "description": {}
+  - "name": "EGY"
+    "title":
+      "en": "Egypt"
+      "fr": "Égypte"
+    "description": {}
+  - "name": "ESH"
+    "title":
+      "en": "Western Sahara"
+      "fr": "République arabe sahraouie démocratique"
+    "description": {}
+  - "name": "ERI"
+    "title":
+      "en": "Eritrea"
+      "fr": "Érythrée"
+    "description": {}
+  - "name": "ESP"
+    "title":
+      "en": "Spain"
+      "fr": "Espagne"
+    "description": {}
+  - "name": "ETH"
+    "title":
+      "en": "Ethiopia"
+      "fr": "Éthiopie"
+    "description": {}
+  - "name": "FIN"
+    "title":
+      "en": "Finland"
+      "fr": "Finlande"
+    "description": {}
+  - "name": "FJI"
+    "title":
+      "en": "Fiji"
+      "fr": "Fidji"
+    "description": {}
+  - "name": "FLK"
+    "title":
+      "en": "Falkland Islands"
+      "fr": "Malouines"
+    "description": {}
+  - "name": "FSM"
+    "title":
+      "en": "Micronesia"
+      "fr": "Micronésie"
+    "description": {}
+  - "name": "FRO"
+    "title":
+      "en": "Faroe Islands"
+      "fr": "Îles Féroé"
+    "description": {}
+  - "name": "FRA"
+    "title":
+      "en": "France"
+      "fr": "France"
+    "description": {}
+  - "name": "GAB"
+    "title":
+      "en": "Gabon"
+      "fr": "Gabon"
+    "description": {}
+  - "name": "GBR"
+    "title":
+      "en": "United Kingdom"
+      "fr": "Royaume-Uni"
+    "description": {}
+  - "name": "GRD"
+    "title":
+      "en": "Grenada"
+      "fr": "Grenade"
+    "description": {}
+  - "name": "GEO"
+    "title":
+      "en": "Georgia"
+      "fr": "Géorgie"
+    "description": {}
+  - "name": "GUF"
+    "title":
+      "en": "French Guiana"
+      "fr": "Guyane"
+    "description": {}
+  - "name": "GGY"
+    "title":
+      "en": "Guernsey"
+      "fr": "Guernesey"
+    "description": {}
+  - "name": "GHA"
+    "title":
+      "en": "Ghana"
+      "fr": "Ghana"
+    "description": {}
+  - "name": "GIB"
+    "title":
+      "en": "Gibraltar"
+      "fr": "Gibraltar"
+    "description": {}
+  - "name": "GRL"
+    "title":
+      "en": "Greenland"
+      "fr": "Groenland"
+    "description": {}
+  - "name": "GMB"
+    "title":
+      "en": "Gambia"
+      "fr": "Gambie"
+    "description": {}
+  - "name": "GIN"
+    "title":
+      "en": "Guinea"
+      "fr": "Guinée"
+    "description": {}
+  - "name": "GLP"
+    "title":
+      "en": "Guadeloupe"
+      "fr": "Guadeloupe"
+    "description": {}
+  - "name": "GNQ"
+    "title":
+      "en": "Equatorial Guinea"
+      "fr": "Guinée équatoriale"
+    "description": {}
+  - "name": "GRC"
+    "title":
+      "en": "Greece"
+      "fr": "Grèce"
+    "description": {}
+  - "name": "SGS"
+    "title":
+      "en": "South Georgia and the South Sandwich Islands"
+      "fr": "Géorgie du Sud-et-les Îles Sandwich du Sud"
+    "description": {}
+  - "name": "GTM"
+    "title":
+      "en": "Guatemala"
+      "fr": "Guatemala"
+    "description": {}
+  - "name": "GUM"
+    "title":
+      "en": "Guam"
+      "fr": "Guam"
+    "description": {}
+  - "name": "GNB"
+    "title":
+      "en": "Guinea-Bissau"
+      "fr": "Guinée-Bissau"
+    "description": {}
+  - "name": "GUY"
+    "title":
+      "en": "Guyana"
+      "fr": "Guyana"
+    "description": {}
+  - "name": "HKG"
+    "title":
+      "en": "Hong Kong"
+      "fr": "Hong Kong"
+    "description": {}
+  - "name": "HMD"
+    "title":
+      "en": "Heard Island and McDonald Islands"
+      "fr": "Îles Heard-et-MacDonald"
+    "description": {}
+  - "name": "HND"
+    "title":
+      "en": "Honduras"
+      "fr": "Honduras"
+    "description": {}
+  - "name": "HRV"
+    "title":
+      "en": "Croatia"
+      "fr": "Croatie"
+    "description": {}
+  - "name": "HTI"
+    "title":
+      "en": "Haiti"
+      "fr": "Haïti"
+    "description": {}
+  - "name": "HUN"
+    "title":
+      "en": "Hungary"
+      "fr": "Hongrie"
+    "description": {}
+  - "name": "IDN"
+    "title":
+      "en": "Indonesia"
+      "fr": "Indonésie"
+    "description": {}
+  - "name": "IRL"
+    "title":
+      "en": "Ireland"
+      "fr": "Irlande"
+    "description": {}
+  - "name": "ISR"
+    "title":
+      "en": "Israel"
+      "fr": "Israël"
+    "description": {}
+  - "name": "IMN"
+    "title":
+      "en": "Isle of Man"
+      "fr": "Île de Man"
+    "description": {}
+  - "name": "IND"
+    "title":
+      "en": "India"
+      "fr": "Inde"
+    "description": {}
+  - "name": "IOT"
+    "title":
+      "en": "British Indian Ocean Territory"
+      "fr": "Territoire britannique de l'océan Indien"
+    "description": {}
+  - "name": "IRQ"
+    "title":
+      "en": "Iraq"
+      "fr": "Irak"
+    "description": {}
+  - "name": "IRN"
+    "title":
+      "en": "Iran"
+      "fr": "Iran"
+    "description": {}
+  - "name": "ISL"
+    "title":
+      "en": "Iceland"
+      "fr": "Islande"
+    "description": {}
+  - "name": "ITA"
+    "title":
+      "en": "Italy"
+      "fr": "Italie"
+    "description": {}
+  - "name": "JEY"
+    "title":
+      "en": "Jersey"
+      "fr": "Jersey"
+    "description": {}
+  - "name": "JAM"
+    "title":
+      "en": "Jamaica"
+      "fr": "Jamaïque"
+    "description": {}
+  - "name": "JOR"
+    "title":
+      "en": "Jordan"
+      "fr": "Jordanie"
+    "description": {}
+  - "name": "JPN"
+    "title":
+      "en": "Japan"
+      "fr": "Japon"
+    "description": {}
+  - "name": "KEN"
+    "title":
+      "en": "Kenya"
+      "fr": "Kenya"
+    "description": {}
+  - "name": "KGZ"
+    "title":
+      "en": "Kyrgyzstan"
+      "fr": "Kirghizistan"
+    "description": {}
+  - "name": "KHM"
+    "title":
+      "en": "Cambodia"
+      "fr": "Cambodge"
+    "description": {}
+  - "name": "KIR"
+    "title":
+      "en": "Kiribati"
+      "fr": "Kiribati"
+    "description": {}
+  - "name": "COM"
+    "title":
+      "en": "Comoros"
+      "fr": "Comores"
+    "description": {}
+  - "name": "KNA"
+    "title":
+      "en": "Saint Kitts and Nevis"
+      "fr": "Saint-Christophe-et-Niévès"
+    "description": {}
+  - "name": "PRK"
+    "title":
+      "en": "North Korea"
+      "fr": "Corée du Nord"
+    "description": {}
+  - "name": "KOR"
+    "title":
+      "en": "South Korea"
+      "fr": "Corée du Sud"
+    "description": {}
+  - "name": "KWT"
+    "title":
+      "en": "Kuwait"
+      "fr": "Koweït"
+    "description": {}
+  - "name": "CYM"
+    "title":
+      "en": "Cayman Islands"
+      "fr": "Îles Caïmans"
+    "description": {}
+  - "name": "KAZ"
+    "title":
+      "en": "Kazakhstan"
+      "fr": "Kazakhstan"
+    "description": {}
+  - "name": "LAO"
+    "title":
+      "en": "Laos"
+      "fr": "Laos"
+    "description": {}
+  - "name": "LBN"
+    "title":
+      "en": "Lebanon"
+      "fr": "Liban"
+    "description": {}
+  - "name": "LCA"
+    "title":
+      "en": "Saint Lucia"
+      "fr": "Sainte-Lucie"
+    "description": {}
+  - "name": "LIE"
+    "title":
+      "en": "Liechtenstein"
+      "fr": "Liechtenstein"
+    "description": {}
+  - "name": "LKA"
+    "title":
+      "en": "Sri Lanka"
+      "fr": "Sri Lanka"
+    "description": {}
+  - "name": "LBR"
+    "title":
+      "en": "Liberia"
+      "fr": "Liberia"
+    "description": {}
+  - "name": "LSO"
+    "title":
+      "en": "Lesotho"
+      "fr": "Lesotho"
+    "description": {}
+  - "name": "LTU"
+    "title":
+      "en": "Lithuania"
+      "fr": "Lituanie"
+    "description": {}
+  - "name": "LUX"
+    "title":
+      "en": "Luxembourg"
+      "fr": "Luxembourg"
+    "description": {}
+  - "name": "LVA"
+    "title":
+      "en": "Latvia"
+      "fr": "Lettonie"
+    "description": {}
+  - "name": "LBY"
+    "title":
+      "en": "Libya"
+      "fr": "Libye"
+    "description": {}
+  - "name": "MAR"
+    "title":
+      "en": "Morocco"
+      "fr": "Maroc"
+    "description": {}
+  - "name": "MCO"
+    "title":
+      "en": "Monaco"
+      "fr": "Monaco"
+    "description": {}
+  - "name": "MDA"
+    "title":
+      "en": "Moldova"
+      "fr": "Moldavie"
+    "description": {}
+  - "name": "MNE"
+    "title":
+      "en": "Montenegro"
+      "fr": "Monténégro"
+    "description": {}
+  - "name": "MAF"
+    "title":
+      "en": "Saint Martin"
+      "fr": "Saint-Martin"
+    "description": {}
+  - "name": "MDG"
+    "title":
+      "en": "Madagascar"
+      "fr": "Madagascar"
+    "description": {}
+  - "name": "MHL"
+    "title":
+      "en": "Marshall Islands"
+      "fr": "Îles Marshall"
+    "description": {}
+  - "name": "MKD"
+    "title":
+      "en": "Macedonia"
+      "fr": "Macédoine"
+    "description": {}
+  - "name": "MLI"
+    "title":
+      "en": "Mali"
+      "fr": "Mali"
+    "description": {}
+  - "name": "MMR"
+    "title":
+      "en": "Myanmar"
+      "fr": "Birmanie"
+    "description": {}
+  - "name": "MNG"
+    "title":
+      "en": "Mongolia"
+      "fr": "Mongolie"
+    "description": {}
+  - "name": "MAC"
+    "title":
+      "en": "Macao"
+      "fr": "Macao"
+    "description": {}
+  - "name": "MNP"
+    "title":
+      "en": "Northern Mariana Islands"
+      "fr": "Îles Mariannes du Nord"
+    "description": {}
+  - "name": "MTQ"
+    "title":
+      "en": "Martinique"
+      "fr": "Martinique"
+    "description": {}
+  - "name": "MRT"
+    "title":
+      "en": "Mauritania"
+      "fr": "Mauritanie"
+    "description": {}
+  - "name": "MSR"
+    "title":
+      "en": "Montserrat"
+      "fr": "Montserrat"
+    "description": {}
+  - "name": "MLT"
+    "title":
+      "en": "Malta"
+      "fr": "Malte"
+    "description": {}
+  - "name": "MUS"
+    "title":
+      "en": "Mauritius"
+      "fr": "Maurice"
+    "description": {}
+  - "name": "MDV"
+    "title":
+      "en": "Maldives"
+      "fr": "Maldives"
+    "description": {}
+  - "name": "MWI"
+    "title":
+      "en": "Malawi"
+      "fr": "Malawi"
+    "description": {}
+  - "name": "MEX"
+    "title":
+      "en": "Mexico"
+      "fr": "Mexique"
+    "description": {}
+  - "name": "MYS"
+    "title":
+      "en": "Malaysia"
+      "fr": "Malaisie"
+    "description": {}
+  - "name": "MOZ"
+    "title":
+      "en": "Mozambique"
+      "fr": "Mozambique"
+    "description": {}
+  - "name": "NAM"
+    "title":
+      "en": "Namibia"
+      "fr": "Namibie"
+    "description": {}
+  - "name": "NCL"
+    "title":
+      "en": "New Caledonia"
+      "fr": "Nouvelle-Calédonie"
+    "description": {}
+  - "name": "NER"
+    "title":
+      "en": "Niger"
+      "fr": "Niger"
+    "description": {}
+  - "name": "NFK"
+    "title":
+      "en": "Norfolk Island"
+      "fr": "Île Norfolk"
+    "description": {}
+  - "name": "NGA"
+    "title":
+      "en": "Nigeria"
+      "fr": "Nigeria"
+    "description": {}
+  - "name": "NIC"
+    "title":
+      "en": "Nicaragua"
+      "fr": "Nicaragua"
+    "description": {}
+  - "name": "NLD"
+    "title":
+      "en": "Netherlands"
+      "fr": "Pays-Bas"
+    "description": {}
+  - "name": "NOR"
+    "title":
+      "en": "Norway"
+      "fr": "Norvège"
+    "description": {}
+  - "name": "NPL"
+    "title":
+      "en": "Nepal"
+      "fr": "Népal"
+    "description": {}
+  - "name": "NRU"
+    "title":
+      "en": "Nauru"
+      "fr": "Nauru"
+    "description": {}
+  - "name": "NIU"
+    "title":
+      "en": "Niue"
+      "fr": "Niue"
+    "description": {}
+  - "name": "NZL"
+    "title":
+      "en": "New Zealand"
+      "fr": "Nouvelle-Zélande"
+    "description": {}
+  - "name": "OMN"
+    "title":
+      "en": "Oman"
+      "fr": "Oman"
+    "description": {}
+  - "name": "PAN"
+    "title":
+      "en": "Panama"
+      "fr": "Panama"
+    "description": {}
+  - "name": "PER"
+    "title":
+      "en": "Peru"
+      "fr": "Pérou"
+    "description": {}
+  - "name": "PYF"
+    "title":
+      "en": "French Polynesia"
+      "fr": "Polynésie française"
+    "description": {}
+  - "name": "PNG"
+    "title":
+      "en": "Papua New Guinea"
+      "fr": "Papouasie-Nouvelle-Guinée"
+    "description": {}
+  - "name": "PHL"
+    "title":
+      "en": "Philippines"
+      "fr": "Philippines"
+    "description": {}
+  - "name": "PAK"
+    "title":
+      "en": "Pakistan"
+      "fr": "Pakistan"
+    "description": {}
+  - "name": "POL"
+    "title":
+      "en": "Poland"
+      "fr": "Pologne"
+    "description": {}
+  - "name": "SPM"
+    "title":
+      "en": "Saint Pierre and Miquelon"
+      "fr": "Saint-Pierre-et-Miquelon"
+    "description": {}
+  - "name": "PCN"
+    "title":
+      "en": "Pitcairn"
+      "fr": "Îles Pitcairn"
+    "description": {}
+  - "name": "PRI"
+    "title":
+      "en": "Puerto Rico"
+      "fr": "Porto Rico"
+    "description": {}
+  - "name": "PSE"
+    "title":
+      "en": "Palestine"
+      "fr": "Palestine"
+    "description": {}
+  - "name": "PRT"
+    "title":
+      "en": "Portugal"
+      "fr": "Portugal"
+    "description": {}
+  - "name": "PLW"
+    "title":
+      "en": "Palau"
+      "fr": "Palaos"
+    "description": {}
+  - "name": "PRY"
+    "title":
+      "en": "Paraguay"
+      "fr": "Paraguay"
+    "description": {}
+  - "name": "QAT"
+    "title":
+      "en": "Qatar"
+      "fr": "Qatar"
+    "description": {}
+  - "name": "REU"
+    "title":
+      "en": "Réunion"
+      "fr": "La Réunion"
+    "description": {}
+  - "name": "ROU"
+    "title":
+      "en": "Romania"
+      "fr": "Roumanie"
+    "description": {}
+  - "name": "SRB"
+    "title":
+      "en": "Serbia"
+      "fr": "Serbie"
+    "description": {}
+  - "name": "RUS"
+    "title":
+      "en": "Russian"
+      "fr": "Russie"
+    "description": {}
+  - "name": "RWA"
+    "title":
+      "en": "Rwanda"
+      "fr": "Rwanda"
+    "description": {}
+  - "name": "SAU"
+    "title":
+      "en": "Saudi Arabia"
+      "fr": "Arabie saoudite"
+    "description": {}
+  - "name": "SLB"
+    "title":
+      "en": "Solomon Islands"
+      "fr": "Salomon"
+    "description": {}
+  - "name": "SYC"
+    "title":
+      "en": "Seychelles"
+      "fr": "Seychelles"
+    "description": {}
+  - "name": "SDN"
+    "title":
+      "en": "Sudan"
+      "fr": "Soudan"
+    "description": {}
+  - "name": "SWE"
+    "title":
+      "en": "Sweden"
+      "fr": "Suède"
+    "description": {}
+  - "name": "SGP"
+    "title":
+      "en": "Singapore"
+      "fr": "Singapour"
+    "description": {}
+  - "name": "SHN"
+    "title":
+      "en": "Saint Helena, Ascension and Tristan da Cunha"
+      "fr": "Sainte-Hélène, Ascension et Tristan da Cunha"
+    "description": {}
+  - "name": "SVN"
+    "title":
+      "en": "Slovenia"
+      "fr": "Slovénie"
+    "description": {}
+  - "name": "SJM"
+    "title":
+      "en": "Svalbard and Jan Mayen"
+      "fr": "Svalbard et ile Jan Mayen"
+    "description": {}
+  - "name": "SVK"
+    "title":
+      "en": "Slovakia"
+      "fr": "Slovaquie"
+    "description": {}
+  - "name": "SLE"
+    "title":
+      "en": "Sierra Leone"
+      "fr": "Sierra Leone"
+    "description": {}
+  - "name": "SMR"
+    "title":
+      "en": "San Marino"
+      "fr": "Saint-Marin"
+    "description": {}
+  - "name": "SEN"
+    "title":
+      "en": "Senegal"
+      "fr": "Sénégal"
+    "description": {}
+  - "name": "SOM"
+    "title":
+      "en": "Somalia"
+      "fr": "Somalie"
+    "description": {}
+  - "name": "SUR"
+    "title":
+      "en": "Suriname"
+      "fr": "Suriname"
+    "description": {}
+  - "name": "SSD"
+    "title":
+      "en": "South Sudan"
+      "fr": "Soudan du Sud"
+    "description": {}
+  - "name": "STP"
+    "title":
+      "en": "Sao Tome and Principe"
+      "fr": "Sao Tomé-et-Principe"
+    "description": {}
+  - "name": "SLV"
+    "title":
+      "en": "El Salvador"
+      "fr": "Salvador"
+    "description": {}
+  - "name": "SXM"
+    "title":
+      "en": "Sint Maarten"
+      "fr": "Sint Maarten"
+    "description": {}
+  - "name": "SYR"
+    "title":
+      "en": "Syrian Arab Republic"
+      "fr": "Syrie"
+    "description": {}
+  - "name": "SWZ"
+    "title":
+      "en": "Swaziland"
+      "fr": "Swaziland"
+    "description": {}
+  - "name": "TCA"
+    "title":
+      "en": "Turks and Caicos Islands"
+      "fr": "Îles Turques-et-Caïques"
+    "description": {}
+  - "name": "TCD"
+    "title":
+      "en": "Chad"
+      "fr": "Tchad"
+    "description": {}
+  - "name": "ATF"
+    "title":
+      "en": "French Southern Territories"
+      "fr": "Terres australes et antarctiques françaises"
+    "description": {}
+  - "name": "TGO"
+    "title":
+      "en": "Togo"
+      "fr": "Togo"
+    "description": {}
+  - "name": "THA"
+    "title":
+      "en": "Thailand"
+      "fr": "Thaïlande"
+    "description": {}
+  - "name": "TJK"
+    "title":
+      "en": "Tajikistan"
+      "fr": "Tadjikistan"
+    "description": {}
+  - "name": "TKL"
+    "title":
+      "en": "Tokelau"
+      "fr": "Tokelau"
+    "description": {}
+  - "name": "TLS"
+    "title":
+      "en": "Timor-Leste"
+      "fr": "Timor oriental"
+    "description": {}
+  - "name": "TKM"
+    "title":
+      "en": "Turkmenistan"
+      "fr": "Turkménistan"
+    "description": {}
+  - "name": "TUN"
+    "title":
+      "en": "Tunisia"
+      "fr": "Tunisie"
+    "description": {}
+  - "name": "TON"
+    "title":
+      "en": "Tonga"
+      "fr": "Tonga"
+    "description": {}
+  - "name": "TUR"
+    "title":
+      "en": "Turkey"
+      "fr": "Turquie"
+    "description": {}
+  - "name": "TTO"
+    "title":
+      "en": "Trinidad and Tobago"
+      "fr": "Trinité-et-Tobago"
+    "description": {}
+  - "name": "TUV"
+    "title":
+      "en": "Tuvalu"
+      "fr": "Tuvalu"
+    "description": {}
+  - "name": "TWN"
+    "title":
+      "en": "Taiwan"
+      "fr": "Taïwan"
+    "description": {}
+  - "name": "TZA"
+    "title":
+      "en": "Tanzania"
+      "fr": "Tanzanie"
+    "description": {}
+  - "name": "UKR"
+    "title":
+      "en": "Ukraine"
+      "fr": "Ukraine"
+    "description": {}
+  - "name": "UGA"
+    "title":
+      "en": "Uganda"
+      "fr": "Ouganda"
+    "description": {}
+  - "name": "UMI"
+    "title":
+      "en": "United States Minor Outlying Islands"
+      "fr": "Îles mineures éloignées des États-Unis"
+    "description": {}
+  - "name": "USA"
+    "title":
+      "en": "United States of America"
+      "fr": "États-Unis"
+    "description": {}
+  - "name": "URY"
+    "title":
+      "en": "Uruguay"
+      "fr": "Uruguay"
+    "description": {}
+  - "name": "UZB"
+    "title":
+      "en": "Uzbekistan"
+      "fr": "Ouzbékistan"
+    "description": {}
+  - "name": "VAT"
+    "title":
+      "en": "Holy See"
+      "fr": "Saint-Siège"
+    "description": {}
+  - "name": "VCT"
+    "title":
+      "en": "Saint Vincent and the Grenadines"
+      "fr": "Saint-Vincent-et-les Grenadines"
+    "description": {}
+  - "name": "VEN"
+    "title":
+      "en": "Venezuela"
+      "fr": "Venezuela"
+    "description": {}
+  - "name": "VGB"
+    "title":
+      "en": "Virgin Islands, British"
+      "fr": "Îles Vierges britanniques"
+    "description": {}
+  - "name": "VIR"
+    "title":
+      "en": "Virgin Islands, U.S."
+      "fr": "Îles Vierges des États-Unis"
+    "description": {}
+  - "name": "VNM"
+    "title":
+      "en": "Viet Nam"
+      "fr": "Viêt Nam"
+    "description": {}
+  - "name": "VUT"
+    "title":
+      "en": "Vanuatu"
+      "fr": "Vanuatu"
+    "description": {}
+  - "name": "WLF"
+    "title":
+      "en": "Wallis and Futuna"
+      "fr": "Wallis-et-Futuna"
+    "description": {}
+  - "name": "WSM"
+    "title":
+      "en": "Samoa"
+      "fr": "Samoa"
+    "description": {}
+  - "name": "YEM"
+    "title":
+      "en": "Yemen"
+      "fr": "Yémen"
+    "description": {}
+  - "name": "MYT"
+    "title":
+      "en": "Mayotte"
+      "fr": "Mayotte"
+    "description": {}
+  - "name": "ZAF"
+    "title":
+      "en": "South Africa"
+      "fr": "Afrique du Sud"
+    "description": {}
+  - "name": "ZMB"
+    "title":
+      "en": "Zambia"
+      "fr": "Zambie"
+    "description": {}
+  - "name": "ZWE"
+    "title":
+      "en": "Zimbabwe"
+      "fr": "Zimbabwe"
+    "description": {}
+- "name": "populations-selectionCriteria-ageMin"
+  "title":
+    "en": "Selection criteria - Minimum age"
+    "fr": "Critères de sélection - Age minimum"
+  "description":
+    "en": "Participant's minimum age."
+    "fr": "Age minimum du participant."
+  "attributes":
+    "type": "integer"
+    "field": "populations.model.selectionCriteria.ageMin"
+    "alias": "populations-model-selectionCriteria-ageMin"
+- "name": "populations-selectionCriteria-ageMax"
+  "title":
+    "en": "Selection criteria - Maximum age"
+    "fr": "Critères de sélection - Age maximum"
+  "description":
+    "en": "Participant's maximum age."
+    "fr": "Age maximum du participant."
+  "attributes":
+    "type": "integer"
+    "field": "populations.model.selectionCriteria.ageMax"
+    "alias": "populations-model-selectionCriteria-ageMax"
+- "name": "populations-selectionCriteria-gender"
+  "title":
+    "en": "Selection criteria - Sex"
+    "fr": "Critères de sélection - Genre"
+  "description":
+    "en": "Participant’s sex"
+  "attributes":
+    "field": "populations.model.selectionCriteria.gender"
+    "alias": "populations-model-selectionCriteria-gender"
+  "terms":
+  - "name": "men"
+    "title":
+      "en": "Men only"
+      "fr": "Hommes seulement"
+    "description":
+      "en": "Study recruits men only."
+  - "name": "women"
+    "title":
+      "en": "Women only"
+      "fr": "Femmes seulement"
+    "description":
+      "en": "Study recruits women only."
+  - "name": "women_men"
+    "title":
+      "en": "Women and men"
+      "fr": "Femmes et hommes"
+    "description":
+      "en": "Study recruits both women and men."
+- "name": "numberOfParticipants-participant-number"
+  "title":
+    "en": "Number of participants"
+    "fr": "Nombre de participants"
+  "description":
+    "en": "Number of participants recruited or to be recruited by the study."
+    "fr": "Nombre de participants recrutés ou à recruter par l'étude."
+  "attributes":
+    "type": "integer"
+    "field": "model.numberOfParticipants.participant.number"
+    "alias": "model-numberOfParticipants-participant-number"
+  "terms": []
+- "name": "numberOfParticipants-participant-range"
+  "title":
+    "en": "Number of participants (ranges)"
+    "fr": "Nombre de participants (intervalles)"
+  "description":
+    "en": "The number of participants can be lower than the actual number."
+    "fr": "Le nombre de participants peut être inférieur au nombre effectivement atteint."
+  "attributes":
+    "type": "integer"
+    "field": "model.numberOfParticipants.participant.number"
+    "alias": "model-numberOfParticipants-participant-range"
+  "terms":
+    - "name": "*:1000"
+      "title":
+        "en": "less than 1,000"
+        "fr": "moins de 1 000"
+      "description": {}
+      "keywords": {}
+    - "name": "1000:5000"
+      "title":
+        "en": "1,000 to 4,999"
+        "fr": "1 000 à 4 999"
+      "description": {}
+      "keywords": {}
+    - "name": "5000:10000"
+      "title":
+        "en": "5,000 to 9,999"
+        "fr": "5 000 à 9 999"
+      "description": {}
+      "keywords": {}
+    - "name": "10000:50000"
+      "title":
+        "en": "10,000 to 49,999"
+        "fr": "10 000 à 49 999"
+      "description": {}
+      "keywords": {}
+    - "name": "50000:100000"
+      "title":
+        "en": "50,000 to 99,999"
+        "fr": "50 000 à 99 999"
+      "description": {}
+      "keywords": {}
+    - "name": "100000:500000"
+      "title":
+        "en": "100,000 to 499,999"
+        "fr": "100 000 à 499 999"
+      "description": {}
+      "keywords": {}
+    - "name": "500000:*"
+      "title":
+        "en": "500,000 and more"
+        "fr": "500 000 et plus"
+      "description": {}
+      "keywords": {}
+- "name": "methods-recruitments"
+  "title":
+    "en": "Recruitment target"
+    "fr": "Cible de recrutement"
+  "description":
+    "en": "Type of participants (e.g. individuals, families) targeted for recruitment by the study."
+    "fr": "Type de participants (e.g. individus, familles) ciblé pour le recrutement par l'étude."
+  "repeatable": "true"
+  "attributes":
+    "field": "model.methods.recruitments"
+    "alias": "model-methods-recruitments"
+  "terms":
+  - "name": "individuals"
+    "title":
+      "en": "Individuals"
+      "fr": "Individus"
+    "description":
+      "en": "Study has recruited individuals as their target participants."
+      "fr": "L'étude a recruté des individus comme paarticipants cibles."
+  - "name": "sing_gen"
+    "title":
+      "en": "Single generation"
+    "description":
+      "en": "Study has recruited a single generation as their target participants."
+  - "name": "multi_gen"
+    "title":
+      "en": "Multiple generations"
+    "description":
+      "en": "Study has recruited multiple generations as their target participants."
+  - "name": "other"
+    "title":
+      "en": "Other"
+      "fr": "Autre"
+    "description":
+      "en": "Study has recruited other type of participants."
+      "fr": "L'étude a recruté un autre type de participants."
+- "name": "populations-recruitment-dataSources"
+  "title":
+    "en": "Sources of recruitment"
+    "fr": "Sources de recrutement"
+  "description":
+    "en": "The population(s) from which individuals are recruited to participate in the study."
+    "fr": "La ou les population(s) à partir de(s) quelle(s) les individus sont recrutés pour participer à l'étude."
+  "attributes":
+    "field": "populations.model.recruitment.dataSources"
+    "alias": "populations-model-recruitment-dataSources"
+  "repeatable": "true"
+  "terms":
+  - "name": "general_population"
+    "title":
+      "en": "General population"
+      "fr": "Population générale"
+    "description":
+      "en": "Participants are recruited from the general population."
+      "fr": "Les participants sont recrutés à partir de la population générale."
+  - "name": "specific_population"
+    "title":
+      "en": "Specific population"
+      "fr": "Population spécifique"
+    "description":
+      "en": "Participants are recruited rom a specific sub-population."
+      "fr": "Les participants sont recrutés à partir d'une sous-population spécifique."
+  - "name": "exist_studies"
+    "title":
+      "en": "Participants from existing studies"
+      "fr": "Participants provenant d'études existantes"
+    "description":
+      "en": "Participants are recruited from an existing study."
+      "fr": "Les participants sont recrutés à partir d'une étude existante."
+  - "name": "other"
+    "title":
+      "en": "Other"
+      "fr": "Autre"
+    "description":
+      "en": "Participants are recruited from an another source."
+      "fr": "Les participants sont recrutés à partir d'une autre source."
+- "name": "populations-dataCollectionEvents-dataSources"
+  "title":
+    "en": "Data sources"
+    "fr": "Source des données"
+  "description":
+    "en": "Source from which information is generated/extracted"
+    "fr": "Source à partir de laquelle l'information est générée/extraite."
+  "attributes":
+    "field": "populations.dataCollectionEvents.model.dataSources"
+    "alias": "populations-dataCollectionEvents-model-dataSources"
+  "repeatable": "true"
+  "terms":
+  - "name": "questionnaires"
+    "title":
+      "en": "Questionnaires"
+      "fr": "Questionnaires"
+    "description":
+      "en": "Questionnaires are used to collect information."
+      "fr": "Des questionnaires sont utilisés dans la collecte d'information."
+  - "name": "cognitive_measures"
+    "title":
+      "en": "Cognitive measures"
+      "fr": "Mesures cognitives"
+    "description":
+      "en": "Information on cognitive measures is collected."
+      "fr": "De l'information sur les mesures cognitives est collectée."
+  - "name": "physical_measures"
+    "title":
+      "en": "Physical measures"
+      "fr": "Mesures physiques"
+    "description":
+      "en": "Information on physical measures is collected."
+      "fr": "De l'information sur les mesures physiques est collectée."
+  - "name": "biological_samples"
+    "title":
+      "en": "Biosamples"
+      "fr": "Échantillons biologiques"
+    "description":
+      "en": "Biological samples are collected."
+      "fr": "Des échantillons biologiques sont collectés."
+  - "name": "administratives_databases"
+    "title":
+      "en": "Administrative databases"
+      "fr": "Bases de données administratives"
+    "description":
+      "en": "Information collected is extracted from governmental, hospital or other registries."
+      "fr": "L'information coolectée est extraite à partir de registres gouvernementaux, hospitalier ou autres."
+  - "name": "others"
+    "title":
+      "en": "Others"
+      "fr": "Autres"
+    "description":
+      "en": "Information from other sources is collected."
+      "fr": "De l'information provenant d'autres sources est collecté."
+- "name": "populations-recruitment-specificPopulationSources"
+  "title":
+    "en": "Recruitment source - Specific population"
+    "fr": "Sources de recrutement - Population spécifique"
+  "description":
+    "en": "Individuals are recruited to participate in the study from a particular institution or organization."
+  "attributes":
+    "field": "populations.model.recruitment.specificPopulationSources"
+    "alias": "populations-model-recruitment-specificPopulationSources"
+  "repeatable": "true"
+  "terms":
+  - "name": "clinic_patients"
+    "title":
+      "en": "Clinic patients"
+      "fr": "Patients d'une clinique"
+    "description":
+      "en": "Individuals are recruited from the healthcare facility where they receive medical care."
+  - "name": "specific_association"
+    "title":
+      "en": "Members of an association"
+      "fr": "Membres d'une association"
+    "description":
+      "en": "Individuals are recruited from an associations in which they participate (e.g. professional association, patient network, etc)."
+  - "name": "other"
+    "title":
+      "en": "Other specific population"
+      "fr": "Autre population spécifique"
+    "description":
+      "en": "Other specific population."
+- "name": "populations-dataCollectionEvents-bioSamples"
+  "title":
+    "en": "Data sources - Biosamples"
+    "fr": "Source des données - Échantillons biologiques"
+  "description":
+    "en": "Biospecimens or biological material."
+  "attributes":
+    "field": "populations.dataCollectionEvents.model.bioSamples"
+    "alias": "populations-dataCollectionEvents-model-bioSamples"
+  "repeatable": "true"
+  "terms":
+  - "name": "blood"
+    "title":
+      "en": "Blood"
+      "fr": "Sang"
+    "description": {}
+  - "name": "urine"
+    "title":
+      "en": "Urine"
+      "fr": "Urine"
+    "description": {}
+  - "name": "saliva"
+    "title":
+      "en": "Saliva"
+      "fr": "Salive"
+    "description": {}
+  - "name": "hair"
+    "title":
+      "en": "Hair"
+      "fr": "Cheveux"
+    "description": {}
+  - "name": "cord_blood"
+    "title":
+      "en": "Cord blood"
+      "fr": "Sang de cordon"
+    "description": {}
+  - "name": "tissues"
+    "title":
+      "en": "Tissues"
+      "fr": "Tissus"
+    "description": {}
+  - "name": "nail"
+    "title":
+      "en": "Nail"
+      "fr": "Ongles"
+    "description": {}
+  - "name": "buccal_cells"
+    "title":
+      "en": "Buccal cells"
+      "fr": "Cellules buccales"
+    "description": {}
+  - "name": "others"
+    "title":
+      "en": "Others"
+      "fr": "Autres"
+    "description": {}
+- "name": "populations-dataCollectionEvents-administrativeDatabases"
+  "title":
+    "en": "Data sources - Administrative databases"
+    "fr": "Source des données - Bases de données administratives"
+  "description":
+    "en": "Databases containing information collected by governments for administrative purposes that are linked to the study."
+  "attributes":
+    "field": "populations.dataCollectionEvents.model.administrativeDatabases"
+    "alias": "populations-dataCollectionEvents-model-administrativeDatabases"
+  "repeatable": "true"
+  "terms":
+  - "name": "health_databases"
+    "title":
+      "en": "Health databases"
+      "fr": "Bases de données de santé"
+    "description":
+      "en": "Administrative database containing information concerning health and use of healthcare services generated through routine administration of health care programs (e.g. hospitalization, physician billing, drug utilization)."
+  - "name": "vital_statistics_databases"
+    "title":
+      "en": "Vital statistics databases"
+      "fr": "Bases de données de l'état civil"
+    "description":
+      "en": "Administrative database containing information concerning the important events in human life, such as births, deaths, marriages and migrations (e.g. death registries)."
+  - "name": "socioeconomic_databases"
+    "title":
+      "en": "Socioeconomic databases"
+      "fr": "Bases de données socio-économiques"
+    "description":
+      "en": "Administrative database containing socioeconomic information (e.g. census)."
+  - "name": "environmental_databases"
+    "title":
+      "en": "Environmental databases"
+      "fr": "Bases de données environnementales"
+    "description":
+      "en": "Administrative database containing information concerning natural or man-made environmental characteristics (e.g. air pollutants, weather, built environment)."
+- "name": "infoPublic"
+  "title":
+    "en": "Study verification"
+  "description":
+    "en": "This information has been verified by a contact associated with the study."
+  "attributes":
+    "field": "model.infoPublic"
+    "alias": "model-infoPublic"
+  "terms":
+  - "name": "public"
+    "title":
+      "en": "No"
+    "description":
+      "en": "Information from public sources"
+  - "name": "contact"
+    "title":
+      "en": "Yes"
+    "description":
+      "en": "Information has been verified by a contact associated with the study"
+- "name": "methods-intervention"
+  "title":
+    "en": "Type of intervention"
+  "description":
+    "en": "The type of intervention that was used"
+  "attributes":
+    "field": "model.methods.intervention"
+    "alias": "model-methods-intervention"
+  "terms":
+  - "name": "pharma"
+    "title":
+      "en": "Pharmacological"
+    "description":
+      "en": "Intervention was pharmalogical"
+  - "name": "lifestyle"
+    "title":
+      "en": "Lifestyle"
+    "description":
+      "en": "Intervention was lifestyle-based"
+  - "name": "other"
+    "title":
+      "en": "Other"
+    "description":
+      "en": "Other type of intervention"
+- "name": "timeline-start-year-rec"
+  "title":
+    "en": "Recruitment start year"
+  "description":
+    "en": "Year in which study recruitment started."
+  "attributes":
+    "type": "integer"
+    "field": "model.timeline.startYearRec"
+    "alias": "model-timeline-startYearRec"
+- "name": "timeline-start-month-rec"
+  "title":
+    "en": "Recruitment start month"
+  "description":
+    "en": "Month in which study recruitment started."
+  "attributes":
+    "type": "integer"
+    "field": "model.timeline.startMonthRec"
+    "alias": "model-timeline-startMonthRec"
+- "name": "timeline-end-year-rec"
+  "title":
+    "en": "Recruitment end year"
+  "description":
+    "en": "Year in which study recruitment ended."
+  "attributes":
+    "type": "integer"
+    "field": "model.timeline.endYearRec"
+    "alias": "model-timeline-endYearRec"
+- "name": "timeline-end-month-rec"
+  "title":
+    "en": "Recruitment end month"
+  "description":
+    "en": "Month in which study recruitment ended."
+  "attributes":
+    "type": "integer"
+    "field": "model.timeline.endMonthRec"
+    "alias": "model-timeline-endMonthRec"
+- "name": "timeline-continue-rec"
+  "title":
+    "en": "Is recruitment continuing?"
+  "description":
+    "en": "Recruitment is still continuing"
+  "attributes":
+    "field": "model.timeline.continueRec"
+    "alias": "model-timeline-continueRec"
+  "terms":
+  - "name": "yes"
+    "title":
+      "en": "Yes"
+    "description":
+      "en": "Recruitment is continuing"
+  - "name": "no"
+    "title":
+      "en": "No"
+    "description":
+      "en": "Recruitment has finished"
+- "name": "health-information-health-info"
+  "title":
+    "en": "Health information"
+  "description":
+    "en": "Information contained in the study relating to participant health."
+  "attributes":
+    "field": "model.healthInformation.healthInfo"
+    "alias": "model-healthInformation-healthInfo"
+  "terms":
+  - "name": "AT_p"
+    "title":
+      "en": "Anthropometric traits (e.g. BMI, waist circumference) at baseline"
+    "description":
+      "en": "Anthropometric traits (e.g. BMI, waist circumference) at baseline"
+  - "name": "AT_i"
+    "title":
+      "en": "Anthropometric traits (e.g. BMI, waist circumference) during follow up"
+    "description":
+      "en": "Anthropometric traits (e.g. BMI, waist circumference) during follow up"
+  - "name": "GT_p"
+    "title":
+      "en": "Glycaemic traits (e.g. glucose, insulin) at baseline"
+    "description":
+      "en": "Glycaemic traits (e.g. glucose, insulin) at baseline"
+  - "name": "GT_i"
+    "title":
+      "en": "Glycaemic traits (e.g. glucose, insulin) during follow up"
+    "description":
+      "en": "Glycaemic traits (e.g. glucose, insulin) during follow up"
+  - "name": "T1D_p"
+    "title":
+      "en": "Prevalent type 1 diabetes at baseline"
+    "description":
+      "en": "Prevalent type 1 diabetes at baseline"
+  - "name": "T1D_i"
+    "title":
+      "en": "Incident type 1 diabetes during follow up"
+    "description":
+      "en": "Incident type 1 diabetes during follow up"
+  - "name": "T2D_p"
+    "title":
+      "en": "Prevalent type 2 diabetes at baseline"
+    "description":
+      "en": "Prevalent type 2 diabetes at baseline"
+  - "name": "T2D_i"
+    "title":
+      "en": "Incident type 2 diabetes during follow up"
+    "description":
+      "en": "Incident type 2 diabetes during follow up"
+  - "name": "GD_p"
+    "title":
+      "en": "History of gestational diabetes"
+    "description":
+      "en": "History of gestational diabetes"
+  - "name": "GD_i"
+    "title":
+      "en": "Incident gestational diabetes during follow up"
+    "description":
+      "en": "Incident gestational diabetes during follow up"
+  - "name": "OD_p"
+    "title":
+      "en": "Other types of diabetes prevalent at baseline"
+    "description":
+      "en": "Other types of diabetes prevalent at baseline"
+  - "name": "OD_i"
+    "title":
+      "en": "Other types of diabetes incident during follow up"
+    "description":
+      "en": "Other types of diabetes incident during follow up"
+- "name": "measure-diet"
+  "title":
+    "en": "Does the study have measures of diet?"
+  "description":
+    "en": "Does the study have measures of diet?"
+  "attributes":
+    "field": "model.measureDiet"
+    "alias": "model-measureDiet"
+  "terms":
+  - "name": "yes"
+    "title":
+      "en": "Yes"
+    "description":
+      "en": "Has measures of diet"
+  - "name": "no"
+    "title":
+      "en": "No"
+    "description":
+      "en": "Does not have measures of diet"
+- "name": "measure-PA"
+  "title":
+    "en": "Does the study have measures of physical activity?"
+  "description":
+    "en": "Does the study have measures of physical activity?"
+  "attributes":
+    "field": "model.measurePA"
+    "alias": "model-measurePA"
+  "terms":
+  - "name": "yes"
+    "title":
+      "en": "Yes"
+    "description":
+      "en": "Has measures of physical activity"
+  - "name": "no"
+    "title":
+      "en": "No"
+    "description":
+      "en": "Does not have measures of physical activity"
+- "name": "measure-PA"
+  "title":
+    "en": "Does the study have measures of physical activity?"
+  "description":
+    "en": "Does the study have measures of physical activity?"
+  "attributes":
+    "field": "model.measurePA"
+    "alias": "model-measurePA"
+  "terms":
+  - "name": "yes"
+    "title":
+      "en": "Yes"
+    "description":
+      "en": "Has measures of physical activity"
+  - "name": "no"
+    "title":
+      "en": "No"
+    "description":
+      "en": "Does not have measures of physical activity"
+- "name": "measure-DNA"
+  "title":
+    "en": "Does the study have DNA extracted or have a potential source of DNA?"
+  "description":
+    "en": "Does the study have DNA extracted or have a potential source of DNA?"
+  "attributes":
+    "field": "model.measureDNA"
+    "alias": "model-measureDNA"
+  "terms":
+  - "name": "yes"
+    "title":
+      "en": "Yes"
+    "description":
+      "en": "Study has DNA extracted or has potential source of DNA."
+  - "name": "no"
+    "title":
+      "en": "No"
+    "description":
+      "en": "Study does not have DNA extracted or have potential source of DNA."
+- "name": "populations-selectionCriteria-areaResidence"
+  "title":
+    "en": "Area of residence"
+  "description":
+    "en": "Area of residence"
+  "attributes":
+    "field": "populations.model.selectionCriteria.areaResidence"
+    "alias": "populations-model-selectionCriteria-areaResidence"
+  "terms":
+  - "name": "urbanRural"
+    "title":
+      "en": "Urban and rural"
+    "description":
+      "en": "Participants from urban and rural areas."
+  - "name": "urban"
+    "title":
+      "en": "Urban"
+    "description":
+      "en": "Participants from urban areas."
+  - "name": "rural"
+    "title":
+      "en": "Rural"
+    "description":
+      "en": "Participants from rural areas."
+- "name": "populations-selectionCriteria-criteria"
+  "title":
+    "en": "Specific criteria"
+  "description":
+    "en": "The recruited individuals meet specific criteria"
+  "attributes":
+    "field": "populations.model.selectionCriteria.criteria"
+    "alias": "populations-model-selectionCriteria-criteria"
+  "terms":
+  - "name": "gravidity"
+    "title":
+      "en": "Pregnant women"
+    "description":
+      "en": "Pregnant women have been recruited."
+  - "name": "newborn"
+    "title":
+      "en": "Newborns"
+    "description":
+      "en": "Study recruits recently born children."
+  - "name": "migrant"
+    "title":
+      "en": "Migrants"
+    "description":
+      "en": "Study recruits migrants"
