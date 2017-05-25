@@ -1,535 +1,552 @@
 [
-  {
-    "type": "section",
-    "htmlClass": "row",
-    "items": [
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "key": "markerPaper",
-            "type": "textarea",
-            "description": "If applicable, enter a bibliographic citation (i.e. published sources such as journal article, web site, or report) which should be used to refer to your study."
-          },
-          "pubmedId"
-        ]
-      },
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          "website",
-          {
-            "key": "infoPublic",
-            "description": "t(study_taxonomy.vocabulary.infoPublic.description)",
-            "type": "radios",
-            "titleMap": [
-              {
-                "value": "public",
-                "name": "t(study_taxonomy.vocabulary.infoPublic.term.public.title)"
-              },
-              {
-                "value": "contact",
-                "name": "t(study_taxonomy.vocabulary.infoPublic.term.contact.title)"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "help",
-    "helpvalue": "<h3>t(study.general-design)</h3>"
-  },
-  {
-    "type": "section",
-    "htmlClass": "row",
-    "items": [
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "type": "help",
-            "helpvalue": "<h4>t(study.design)</h4>"
-          },
-          {
-            "type": "help",
-            "helpvalue": "<h5>small description??</h5>"
-          },
-          {
-            "key": "methods",
-            "notitle": true,
-            "items": [
-              {
-                "key": "methods.design",
-                "notitle": true,
-                "type": "radios",
-                "description": "t(study_taxonomy.vocabulary.methods-design.description)",
-                "titleMap": [
-                  {
-                    "value": "cohort_study",
-                    "name": "t(study_taxonomy.vocabulary.methods-design.term.cohort_study.title)"
-                  },
-                  {
-                    "value": "case_control",
-                    "name": "t(study_taxonomy.vocabulary.methods-design.term.case_control.title)"
-                  },
-                  {
-                    "value": "case_only",
-                    "name": "t(study_taxonomy.vocabulary.methods-design.term.case_only.title)"
-                  },
-                  {
-                    "value": "clinical_trial",
-                    "name": "t(study_taxonomy.vocabulary.methods-design.term.clinical_trial.title)"
-                  },
-                  {
-                    "value": "other",
-                    "name": "t(study_taxonomy.vocabulary.methods-design.term.other.title)"
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "methods.trialNumber",
-                    "condition": "model.methods.design==\"clinical_trial\""
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "methods.intervention",
-                    "type": "radios",
-                    "description": "normally enum info are in taxonomy not translate",
-                    "condition": "model.methods.design==\"clinical_trial\"",
-                    "titleMap": [
-                      {
-                        "value": "pharma",
-                        "name": "pharma - in taxonomy"
-                      },
-                      {
-                        "value": "lifestyle",
-                        "name": "lifestyle - in taxonomy"
-                      },
-                      {
-                        "value": "other",
-                        "name": "other - in taxonomy"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "methods.otherIntervention",
-                    "condition": "model.methods.intervention==\"other\""
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "methods.otherDesign",
-                    "condition": "model.methods.design==\"other\""
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "help",
-            "helpvalue": "<h4>t(study.timeline)</h4>"
-          },
-          {
-            "type": "help",
-            "helpvalue": "<h5>t(study.recruitment-start-description)</h5>"
-          },
-          {
-            "key": "timeline",
-            "notitle": true,
-            "items": [
-              {
-                "type": "section",
-                "htmlClass": "row",
-                "items": [
-                  {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "items": [
-                      {
-                        "key": "timeline.startMonthRec"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "items": [
-                      {
-                        "key": "timeline.startYearRec"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "key": "timeline.continueRec",
-                "type": "radios",
-                "titleMap": [
-                  {
-                    "value": "yes",
-                    "name": "yes - translate"
-                  },
-                  {
-                    "value": "no",
-                    "name": "no - translate"
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "condition": "model.timeline.continueRec==\"no\"",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "type": "help",
-                    "helpvalue": "<h5>t(study.recruitment-end-description)</h5>"
-                  },
-                  {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "items": [
-                      {
-                        "key": "timeline.endMonthRec"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "items": [
-                      {
-                        "key": "timeline.endYearRec"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "type": "help",
-            "helpvalue": "<h4>t(numberOfParticipants.label)</h4>"
-          },
-          {
-            "key": "numberOfParticipants",
-            "notitle": true,
-            "items": [
-              {
-                "key": "numberOfParticipants.participant",
-                "notitle": true
-              },
-              {
-                "key": "numberOfParticipants.participantsActual"
-              },
-              {
-                "type": "section",
-                "condition": "model.numberOfParticipants.participantsActual>0",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "type": "help",
-                    "helpvalue": "<h5>t(study.participantsActual-date-description)</h5>"
-                  },
-                  {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "items": [
-                      {
-                        "key": "numberOfParticipants.actualYear"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "items": [
-                      {
-                        "key": "numberOfParticipants.actualMonth"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "help",
-            "helpvalue": "<h4>t(study.recruitment-sources.label)</h4>"
-          },
-          {
-            "key": "recruitmentIC",
-            "type": "radios",
-            "notitle": true,
-            "description": "the description from taxonomy",
-            "titleMap": [
-              {
-                "value": "individuals",
-                "name": "taxonomy individuals"
-              },
-              {
-                "value": "sing_gen",
-                "name": "taxonomy single generation"
-              },
-              {
-                "value": "multi_gen",
-                "name": "taxonomy multi generation"
-              },
-              {
-                "value": "other",
-                "name": "taxonomy other"
-              }
-            ]
-          },
-          {
-            "type": "section",
-            "htmlClass": "hoffset3",
-            "items": [
-              {
-                "key": "otherRecruitmentIC",
-                "condition": "model.recruitmentIC.indexOf(\"other\")>=0"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "htmlClass": "row",
-    "items": [
-      {
-        "type": "help",
-        "helpvalue": "<h3>Available Information</h3>"
-      },
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "type": "help",
-            "helpvalue": "<h4>Health Information</h4>"
-          },
-          {
-            "key": "healthInformation.healthInfo",
-            "notitle": true,
-            "type": "checkboxes",
-            "description": "t(study_taxonomy.vocabulary.health-information-health-info.description)",
-            "titleMap": [
-              {
-                "value": "AT_p",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.AT_p.title)"
-              },
-              {
-                "value": "AT_i",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.AT_i.title)"
-              },
-              {
-                "value": "GT_p",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GT_p.title)"
-              },
-              {
-                "value": "GT_i",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GT_i.title)"
-              },
-              {
-                "value": "T1D_p",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T1D_p.title)"
-              },
-              {
-                "value": "T1D_i",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T1D_i.title)"
-              },
-              {
-                "value": "T2D_p",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T2D_p.title)"
-              },
-              {
-                "value": "T2D_i",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T2D_i.title)"
-              },
-              {
-                "value": "GD_p",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GD_p.title)"
-              },
-              {
-                "value": "GD_i",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GD_i.title)"
-              },
-              {
-                "value": "OD_p",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.OD_p.title)"
-              },
-              {
-                "value": "OD_i",
-                "name": "t(study_taxonomy.vocabulary.health-information-health-info.term.OD_i.title)"
-              }
-            ]
-          },
-          {
-            "type": "section",
-            "htmlClass": "hoffset3",
-            "items": [
-              {
-                "key": "healthInformation.otherDiab",
-                "condition": "model.healthInformation.healthInfo.includes(\"OD_p\")||model.healthInformation.healthInfo.includes(\"OD_i\")"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "type": "help",
-            "helpvalue": "<h4>Key Exposures</h4>"
-          },
-          {
-            "key": "measureDiet",
-            "type": "radios",
-            "titleMap": [
-              {
-                "value": "yes",
-                "name": "t(study_taxonomy.vocabulary.measure-diet.term.yes.title)"
-              },
-              {
-                "value": "no",
-                "name": "t(study_taxonomy.vocabulary.measure-diet.term.no.title)"
-              }
-            ]
-          },
-          {
-            "key": "measurePA",
-            "type": "radios",
-            "titleMap": [
-              {
-                "value": "yes",
-                "name": "t(study_taxonomy.vocabulary.measure-PA.term.yes.title)"
-              },
-              {
-                "value": "no",
-                "name": "t(study_taxonomy.vocabulary.measure-PA.term.no.title)"
-              }
-            ]
-          },
-          {
-            "key": "measureDNA",
-            "type": "radios",
-            "titleMap": [
-              {
-                "value": "yes",
-                "name": "t(study_taxonomy.vocabulary.measure-DNA.term.yes.title)"
-              },
-              {
-                "value": "no",
-                "name": "t(study_taxonomy.vocabulary.measure-DNA.term.no.title)"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "htmlClass": "row",
-    "items": [
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "type": "help",
-            "helpvalue": "<h3>Ethnic and racial groups recruited</h3>"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "section",
-    "htmlClass": "row",
-    "items": [
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "type": "help",
-            "helpvalue": "<h5>Please answer the questions below to give</h5>"
-          },
-          {
-            "key": "ethnicityRace.numHisLat",
-            "description": "Please indicate the approximate number of participants that are of Hispanic or Latino origin"
-          },
-          {
-            "key": "ethnicityRace.subformsHisLat",
-            "condition": "model.ethnicityRace.numHisLat > 0",
-            "add": "Add optional genotyping information",
-            "style": {
-              "add": "btn-success"
-            },
-            "items": [
-              "ethnicityRace.subformsHisLat[].genotypingPlat",
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "ethnicityRace.subformsHisLat[].otherGenoPlat",
-                    "condition": "model.ethnicityRace.subformsHisLat[arrayIndex].genotypingPlat==\"other\""
-                  }
-                ]
-              },
-              "ethnicityRace.subformsHisLat[].numberGenoIndiv",
-              "ethnicityRace.subformsHisLat[].imputationPanel",
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "ethnicityRace.subformsHisLat[].otherImputPanel",
-                    "condition": "model.ethnicityRace.subformsHisLat[arrayIndex].imputationPanel==\"other\""
-                  }
-                ]
-              }
-            ],
-            "startEmpty": true
-          }
-        ]
-      }
-    ]
-  }
+	{
+		"type": "section",
+		"htmlClass": "row",
+		"items": [
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"key": "markerPaper",
+						"type": "textarea",
+						"description": "t(study.marker-paper-info)"
+					},
+					"pubmedId"
+				]
+			},
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					"website",
+					{
+						"key": "infoPublic",
+						"description": "t(study_taxonomy.vocabulary.infoPublic.description)",
+						"type": "radios",
+						"titleMap": [
+							{
+								"value": "public",
+								"name": "t(study_taxonomy.vocabulary.infoPublic.term.public.title)"
+							},
+							{
+								"value": "contact",
+								"name": "t(study_taxonomy.vocabulary.infoPublic.term.contact.title)"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"type": "help",
+		"helpvalue": "<h3>t(study.general-design)</h3>"
+	},
+	{
+		"type": "section",
+		"htmlClass": "row",
+		"items": [
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<h4>t(study.design)</h4>"
+					},
+					{
+						"type": "help",
+						"helpvalue": "<h5>small description??</h5>"
+					},
+					{
+						"key": "methods",
+						"notitle": true,
+						"items": [
+							{
+								"key": "methods.design",
+								"notitle": true,
+								"type": "radios",
+								"description": "t(study_taxonomy.vocabulary.methods-design.description)",
+								"titleMap": [
+									{
+										"value": "cohort_study",
+										"name": "t(study_taxonomy.vocabulary.methods-design.term.cohort_study.title)"
+									},
+									{
+										"value": "case_control",
+										"name": "t(study_taxonomy.vocabulary.methods-design.term.case_control.title)"
+									},
+									{
+										"value": "case_only",
+										"name": "t(study_taxonomy.vocabulary.methods-design.term.case_only.title)"
+									},
+									{
+										"value": "clinical_trial",
+										"name": "t(study_taxonomy.vocabulary.methods-design.term.clinical_trial.title)"
+									},
+									{
+										"value": "other",
+										"name": "t(study_taxonomy.vocabulary.methods-design.term.other.title)"
+									}
+								]
+							},
+							{
+								"type": "section",
+								"htmlClass": "hoffset3",
+								"items": [
+									{
+										"key": "methods.trialNumber",
+										"condition": "model.methods.design==\"clinical_trial\""
+									}
+								]
+							},
+							{
+								"type": "section",
+								"htmlClass": "hoffset3",
+								"items": [
+									{
+										"key": "methods.intervention",
+										"type": "radios",
+										"description": "t(study_taxonomy.vocabulary.methods-intervention.description)",
+										"condition": "model.methods.design==\"clinical_trial\"",
+										"titleMap": [
+											{
+												"value": "pharma",
+												"name": "t(study_taxonomy.vocabulary.methods-intervention.term.pharma.title)"
+											},
+											{
+												"value": "lifestyle",
+												"name": "t(study_taxonomy.vocabulary.methods-intervention.term.lifestyle.title)"
+											},
+											{
+												"value": "other",
+												"name": "t(study_taxonomy.vocabulary.methods-intervention.term.other.title)"
+											}
+										]
+									}
+								]
+							},
+							{
+								"type": "section",
+								"htmlClass": "hoffset3",
+								"items": [
+									{
+										"key": "methods.otherIntervention",
+										"condition": "model.methods.intervention==\"other\"",
+										"description": "t(study.other-intervention-info)"
+									}
+								]
+							},
+							{
+								"type": "section",
+								"htmlClass": "hoffset3",
+								"items": [
+									{
+										"key": "methods.otherDesign",
+										"condition": "model.methods.design==\"other\"",
+										"description": "t(study.other-design-info)"
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "help",
+						"helpvalue": "<h4>t(study.timeline)</h4>"
+					},
+					{
+						"type": "help",
+						"helpvalue": "<h5>t(study.recruitment-start-description)</h5>"
+					},
+					{
+						"key": "timeline",
+						"notitle": true,
+						"items": [
+							{
+								"type": "section",
+								"htmlClass": "row",
+								"items": [
+									{
+										"type": "section",
+										"htmlClass": "col-xs-6",
+										"items": [
+											{
+												"key": "timeline.startMonthRec"
+											}
+										]
+									},
+									{
+										"type": "section",
+										"htmlClass": "col-xs-6",
+										"items": [
+											{
+												"key": "timeline.startYearRec"
+											}
+										]
+									}
+								]
+							},
+							{
+								"key": "timeline.continueRec",
+								"type": "radios",
+								"titleMap": [
+									{
+										"value": "yes",
+										"name": "t(study_taxonomy.vocabulary.timeline-continue-rec.term.yes.title)"
+									},
+									{
+										"value": "no",
+										"name": "t(study_taxonomy.vocabulary.timeline-continue-rec.term.no.title)"
+									}
+								]
+							},
+							{
+								"type": "section",
+								"condition": "model.timeline.continueRec==\"no\"",
+								"htmlClass": "hoffset3",
+								"items": [
+									{
+										"type": "help",
+										"helpvalue": "<h5>t(study.recruitment-end-description)</h5>"
+									},
+									{
+										"type": "section",
+										"htmlClass": "col-xs-6",
+										"items": [
+											{
+												"key": "timeline.endMonthRec"
+											}
+										]
+									},
+									{
+										"type": "section",
+										"htmlClass": "col-xs-6",
+										"items": [
+											{
+												"key": "timeline.endYearRec"
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<h4>t(numberOfParticipants.label)</h4>"
+					},
+					{
+						"key": "numberOfParticipants",
+						"notitle": true,
+						"items": [
+							{
+								"key": "numberOfParticipants.participant",
+								"notitle": true,
+								"description": "t(numberOfParticipants.participants-label)"
+							},
+							{
+								"key": "numberOfParticipants.participantsActual",
+								"description": "t(numberOfParticipants.participantsActual-label)"
+							},
+							{
+								"type": "section",
+								"condition": "model.numberOfParticipants.participantsActual>0",
+								"htmlClass": "hoffset3",
+								"items": [
+									{
+										"type": "help",
+										"helpvalue": "<h5>t(study.participantsActual-date-description)</h5>"
+									},
+									{
+										"type": "section",
+										"htmlClass": "col-xs-6",
+										"items": [
+											{
+												"key": "numberOfParticipants.actualYear"
+											}
+										]
+									},
+									{
+										"type": "section",
+										"htmlClass": "col-xs-6",
+										"items": [
+											{
+												"key": "numberOfParticipants.actualMonth"
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"type": "help",
+						"helpvalue": "<h4>t(study.recruitment-sources.label)</h4>"
+					},
+					{
+						"key": "recruitment",
+						"type": "radios",
+						"notitle": true,
+						"description": "t(study_taxonomy.vocabulary.methods-recruitments.description)",
+						"titleMap": [
+							{
+								"value": "individuals",
+								"name": "t(study_taxonomy.vocabulary.methods-recruitments.term.individuals.title)"
+							},
+							{
+								"value": "sing_gen",
+								"name": "t(study_taxonomy.vocabulary.methods-recruitments.term.sing_gen.title)"
+							},
+							{
+								"value": "multi_gen",
+								"name": "t(study_taxonomy.vocabulary.methods-recruitments.term.multi_gen.title)"
+							},
+							{
+								"value": "other",
+								"name": "t(study_taxonomy.vocabulary.methods-recruitments.term.other.title)"
+							}
+						]
+					},
+					{
+						"type": "section",
+						"htmlClass": "hoffset3",
+						"items": [
+							{
+								"key": "otherRecruitment",
+								"condition": "model.recruitment.indexOf(\"other\")>=0"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"type": "section",
+		"htmlClass": "row",
+		"items": [
+			{
+				"type": "help",
+				"helpvalue": "<h3>Available Information</h3>"
+			},
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<h4>Health Information</h4>"
+					},
+					{
+						"key": "healthInformation.healthInfo",
+						"notitle": true,
+						"type": "checkboxes",
+						"description": "t(study_taxonomy.vocabulary.health-information-health-info.description)",
+						"titleMap": [
+							{
+								"value": "AT_p",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.AT_p.title)"
+							},
+							{
+								"value": "AT_i",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.AT_i.title)"
+							},
+							{
+								"value": "GT_p",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GT_p.title)"
+							},
+							{
+								"value": "GT_i",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GT_i.title)"
+							},
+							{
+								"value": "T1D_p",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T1D_p.title)"
+							},
+							{
+								"value": "T1D_i",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T1D_i.title)"
+							},
+							{
+								"value": "T2D_p",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T2D_p.title)"
+							},
+							{
+								"value": "T2D_i",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.T2D_i.title)"
+							},
+							{
+								"value": "GD_p",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GD_p.title)"
+							},
+							{
+								"value": "GD_i",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.GD_i.title)"
+							},
+							{
+								"value": "OD_p",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.OD_p.title)"
+							},
+							{
+								"value": "OD_i",
+								"name": "t(study_taxonomy.vocabulary.health-information-health-info.term.OD_i.title)"
+							}
+						]
+					},
+					{
+						"type": "section",
+						"htmlClass": "hoffset3",
+						"items": [
+							{
+								"key": "healthInformation.otherDiab",
+								"condition": "model.healthInformation.healthInfo.includes(\"OD_p\")||model.healthInformation.healthInfo.includes(\"OD_i\")"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<h4>Key Exposures</h4>"
+					},
+					{
+						"key": "measureDiet",
+						"type": "radios",
+						"titleMap": [
+							{
+								"value": "yes",
+								"name": "t(study_taxonomy.vocabulary.measure-diet.term.yes.title)"
+							},
+							{
+								"value": "no",
+								"name": "t(study_taxonomy.vocabulary.measure-diet.term.no.title)"
+							}
+						]
+					},
+					{
+						"key": "measurePA",
+						"type": "radios",
+						"titleMap": [
+							{
+								"value": "yes",
+								"name": "t(study_taxonomy.vocabulary.measure-PA.term.yes.title)"
+							},
+							{
+								"value": "no",
+								"name": "t(study_taxonomy.vocabulary.measure-PA.term.no.title)"
+							}
+						]
+					},
+					{
+						"key": "measureDNA",
+						"type": "radios",
+						"titleMap": [
+							{
+								"value": "yes",
+								"name": "t(study_taxonomy.vocabulary.measure-DNA.term.yes.title)"
+							},
+							{
+								"value": "no",
+								"name": "t(study_taxonomy.vocabulary.measure-DNA.term.no.title)"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"type": "section",
+		"htmlClass": "row",
+		"items": [
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<h3>Ethnic and racial groups recruited</h3>"
+					}
+				]
+			}
+		]
+	},
+	{
+		"type": "section",
+		"htmlClass": "row",
+		"items": [
+			{
+				"type": "section",
+				"htmlClass": "col-xs-6",
+				"items": [
+					{
+						"type": "help",
+						"helpvalue": "<h5>Please answer the questions below to give</h5>"
+					},
+					{
+						"key": "ethnicityRace.popSelect",
+						"description": "Please indicate the approximate number of participants that are of Hispanic or Latino origin",
+						"add": "Add another population",
+						"style":
+						{
+							"add": "btn-success"
+						},
+						"items": [
+							"ethnicityRace.popSelect[].ethGroup",
+							"ethnicityRace.popSelect[].numGroup",
+
+							{
+								"key": "ethnicityRace.popSelect[].subformsHisLat",
+								
+								"add": "Add optional genotyping information",
+								"style":
+								{
+									"add": "btn-success"
+								},
+								"items": [
+									"ethnicityRace.popSelect[].subformsHisLat[].genotypingPlat",
+									{
+										"type": "section",
+										"htmlClass": "hoffset3",
+										"items": [
+											{
+												"key": "ethnicityRace.popSelect[].subformsHisLat[].otherGenoPlat",
+												"condition": "model.ethnicityRace,popSelect[arrayIndex].subformsHisLat[arrayIndex].genotypingPlat==\"other\""
+											}
+										]
+									},
+									"ethnicityRace.popSelect[].subformsHisLat[].numberGenoIndiv",
+									"ethnicityRace.subformsHisLat[].imputationPanel",
+									{
+										"type": "section",
+										"htmlClass": "hoffset3",
+										"items": [
+											{
+												"key": "ethnicityRace.popSelect[].subformsHisLat[].otherImputPanel",
+												"condition": "model.ethnicityRace.popSelect[arrayIndex].subformsHisLat[arrayIndex].imputationPanel==\"other\""
+											}
+										]
+									}
+								],
+								"startEmpty": true
+							}
+
+						]
+					}
+
+				]
+			}
+		]
+	}
 ]

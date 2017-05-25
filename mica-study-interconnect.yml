@@ -1793,42 +1793,6 @@
       "en": "Other"
     "description":
       "en": "Other type of intervention"
-- "name": "timeline-start-year-rec"
-  "title":
-    "en": "Recruitment start year"
-  "description":
-    "en": "Year in which study recruitment started."
-  "attributes":
-    "type": "integer"
-    "field": "model.timeline.startYearRec"
-    "alias": "model-timeline-startYearRec"
-- "name": "timeline-start-month-rec"
-  "title":
-    "en": "Recruitment start month"
-  "description":
-    "en": "Month in which study recruitment started."
-  "attributes":
-    "type": "integer"
-    "field": "model.timeline.startMonthRec"
-    "alias": "model-timeline-startMonthRec"
-- "name": "timeline-end-year-rec"
-  "title":
-    "en": "Recruitment end year"
-  "description":
-    "en": "Year in which study recruitment ended."
-  "attributes":
-    "type": "integer"
-    "field": "model.timeline.endYearRec"
-    "alias": "model-timeline-endYearRec"
-- "name": "timeline-end-month-rec"
-  "title":
-    "en": "Recruitment end month"
-  "description":
-    "en": "Month in which study recruitment ended."
-  "attributes":
-    "type": "integer"
-    "field": "model.timeline.endMonthRec"
-    "alias": "model-timeline-endMonthRec"
 - "name": "timeline-continue-rec"
   "title":
     "en": "Is recruitment continuing?"

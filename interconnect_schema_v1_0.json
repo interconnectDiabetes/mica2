@@ -1,370 +1,408 @@
+
 {
-  "type": "object",
-  "properties": {
-    "website": {
-      "title": "t(website)",
-      "type": "string"
-    },
-    "infoPublic": {
-      "type": "string",
-      "title": "t(study_taxonomy.vocabulary.infoPublic.title)",
-      "enum": [
-        "public",
-        "contact"
-      ]
-    },
-    "methods": {
-      "type": "object",
-      "title": "t(study.design)",
-      "properties": {
-        "design": {
-          "type": "string",
-          "title": "t(study_taxonomy.vocabulary.methods-design-ic.title)",
-          "enum": [
-            "cohort_study",
-            "case_control",
-            "case_only",
-            "cross_sectional",
-            "clinical_trial",
-            "other"
-          ]
-        },
-        "trialNumber": {
-          "type": "object",
-          "format": "localizedString",
-          "title": "t(study.trial-number)"
-        },
-        "intervention": {
-          "type": "string",
-          "title": "t(study.intervention)",
-          "enum": [
-            "pharma",
-            "lifestyle",
-            "other"
-          ]
-        },
-        "otherIntervention": {
-          "type": "object",
-          "format": "localizedString",
-          "title": "t(study.other-intervention)"
-        },
-        "otherDesign": {
-          "type": "object",
-          "format": "localizedString",
-          "title": "t(study.other-design)"
-        }
-      }
-    },
-    "timeline": {
-      "type": "object",
-      "title": "t(study.timeline)",
-      "properties": {
-        "startYearRec": {
-          "type": "integer",
-          "title": "t(study.start-year-rec)"
-        },
-        "startMonthRec": {
-          "type": "integer",
-          "title": "t(study.start-month-rec)"
-        },
-        "continueRec": {
-          "type": "string",
-          "items": {
-            "type": "string",
-            "enum": [
-              "yes",
-              "no"
-            ]
-          },
-          "title": "t(study.recruitment-continuing.label)"
-        },
-        "endYearRec": {
-          "type": "integer",
-          "title": "t(study.end-year-rec)"
-        },
-        "endMonthRec": {
-          "type": "integer",
-          "title": "t(study.end-month-rec)"
-        }
-      }
-    },
-    "recruitmentIC": {
-      "type": "string",
-      "enum": [
-        "individuals",
-        "sing_gen",
-        "multi_gen",
-        "other"
-      ],
-      "title": "t(study.recruitment-sources-ic.label)"
-    },
-    "otherRecruitmentIC": {
-      "type": "object",
-      "format": "localizedString",
-      "title": "Other type of people"
-    },
-    "numberOfParticipants": {
-      "type": "object",
-      "properties": {
-        "participant": {
-          "type": "object",
-          "properties": {
-            "number": {
-              "type": "number",
-              "title": "t(numberOfParticipants.participants)"
-            },
-            "noLimit": {
-              "type": "boolean",
-              "title": "t(numberOfParticipants.no-limit)"
-            }
-          }
-        },
-        "participantsActual": {
-          "type": "number",
-          "title": "t(numberOfParticipants.participantsActual)"
-        },
-        "actualYear": {
-          "type": "integer",
-          "title": "t(study.actual-year)"
-        },
-        "actualMonth": {
-          "type": "integer",
-          "title": "t(study.actual-month)"
-        }
-      },
-      "title": "t(numberOfParticipants.label)"
-    },
-    "markerPaper": {
-      "type": "string",
-      "title": "t(study.marker-paper)"
-    },
-    "pubmedId": {
-      "type": "string",
-      "title": "t(study.pubmed-id)"
-    },
-    "healthInformation": {
-      "type": "object",
-      "title": "Health Information",
-      "properties": {
-        "healthInfo": {
-          "type": "array",
-          "title": "t(study_taxonomy.vocabulary.health-information-health-info.title)",
-          "items": {
-            "type": "string",
-            "enum": [
-              "AT_p",
-              "AT_i",
-              "GT_p",
-              "GT_i",
-              "T1D_p",
-              "T1D_i",
-              "T2D_p",
-              "T2D_i",
-              "GD_p",
-              "GD_i",
-              "OD_p",
-              "OD_i"
-            ]
-          }
-        },
-        "otherDiab": {
-          "type": "object",
-          "format": "localizedString",
-          "title": "Other types of diabetes"
-        }
-      }
-    },
-    "measureDiet": {
-      "type": "string",
-      "title": "t(study_taxonomy.vocabulary.measure-diet.title)",
-      "enum": [
-        "yes",
-        "no"
-      ]
-    },
-    "measurePA": {
-      "type": "string",
-      "title": "t(study_taxonomy.vocabulary.measure-PA.title)",
-      "enum": [
-        "yes",
-        "no"
-      ]
-    },
-    "measureDNA": {
-      "type": "string",
-      "title": "t(study_taxonomy.vocabulary.measure-DNA.title)",
-      "enum": [
-        "yes",
-        "no"
-      ]
-    },
-    "ethnicityRace": {
-      "type": "object",
-      "properties": {
-        "numHisLat": {
-          "title": "Hispanic or Latino participants",
-          "type": "integer"
-        },
-        "numAfrican": {
-          "title": "African participants",
-          "type": "integer"
-        },
-        "numEastAsian": {
-          "title": "East Asian participants",
-          "type": "integer"
-        },
-        "numSouthAsian": {
-          "title": "South Asian participants",
-          "type": "integer"
-        },
-        "numEurope": {
-          "title": "European participants",
-          "type": "integer"
-        },
-        "numIndigAmerican": {
-          "title": "Indigeneous American participants",
-          "type": "integer"
-        },
-        "numIndigAust": {
-          "title": "Indigeneous Australian participants",
-          "type": "integer"
-        },
-        "numPacific": {
-          "title": "Pacific islander participants",
-          "type": "integer"
-        },
-        "numMiddleEast": {
-          "title": "Middle Eastern participants",
-          "type": "integer"
-        },
-        "numOtherGroup": {
-          "title": "Other participants",
-          "type": "integer"
-        },
-        "otherGroup": {
-          "title": "Other platform",
-          "type": "string"
-        },
-        "subformsHisLat": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "genotypingPlat": {
-                "type": "string",
-                "title": "Genotyping platform",
-                "enum": [
-                  "humanHap240",
-                  "humanHap300",
-                  "human_CNV370",
-                  "humanHap550",
-                  "human610Quad",
-                  "humanHap650Y",
-                  "human660W",
-                  "human670_QuadCustom",
-                  "humanOmniExpress_12",
-                  "humanOmniExpress_24",
-                  "humanOmniExpressExome_8",
-                  "omniExpressExome_8",
-                  "humanOmni25Exome_8",
-                  "humanOmniZhonghua_8",
-                  "human1M",
-                  "human1M_Duo",
-                  "humanOmni1_Quad",
-                  "humanOmni1S",
-                  "human1.2MDuoCustom",
-                  "humanOmni2.5_4",
-                  "humanOmni2.5_8",
-                  "humanOmni5_4",
-                  "humanCytoSNP_12",
-                  "humanCore_12",
-                  "humanCore_24",
-                  "humanExome_12",
-                  "humanCoreExome_12",
-                  "humanCoreExome_24",
-                  "cardio_Metabo_Chip",
-                  "CVDSNP55",
-                  "psychArray",
-                  "affymetrix_500K",
-                  "affymetrix_6.0",
-                  "other"
-                ]
-              },
-              "otherGenoPlat": {
-                "type": "object",
-                "format": "localizedString",
-                "title": "Other platform"
-              },
-              "numberGenoIndiv": {
-                "type": "integer"
-              },
-              "imputationPanel": {
-                "type": "string",
-                "title": "Imputation panel",
-                "enum": [
-                  "1000G_P3_Oct_2014",
-                  "1000G_P1_Jun_2014",
-                  "1000G_P1_Dec_2013",
-                  "1000G_P1_Sep_2013",
-                  "1000G_P1_Mar_2012",
-                  "1000G_P1_Jun_2011",
-                  "1000G_P1_Dec_2010",
-                  "1000G_Pilot_HapMap3_Jun_2010_Feb_2009",
-                  "1000G_Pilot_Jun_2010",
-                  "hapMap3_Feb_2009",
-                  "hapMap2_Oct_2008",
-                  "hapMap2_Jan_2008",
-                  "hapMap2_Jul_2006",
-                  "other"
-                ]
-              },
-              "otherImputPanel": {
-                "type": "object",
-                "format": "localizedString",
-                "title": "Other imputation panel"
-              },
-              "panelYear": {
-                "type": "integer",
-                "title": "Panel Year"
-              },
-              "panelMonth": {
-                "type": "integer",
-                "title": "Panel Month"
-              },
-              "referencePop": {
-                "type": "string",
-                "title": "Imputation panel",
-                "enum": [
-                  "All",
-                  "Cosmopolitan",
-                  "ASW",
-                  "CEU",
-                  "CHB",
-                  "CHS",
-                  "CLM",
-                  "FIN",
-                  "GBR",
-                  "IBS",
-                  "JPT",
-                  "JPT/CHB",
-                  "LWK",
-                  "MXL",
-                  "PUR",
-                  "TSI",
-                  "YRI",
-                  "other"
-                ]
-              },
-              "otherRefPop": {
-                "type": "object",
-                "format": "localizedString",
-                "title": "Other reference population"
-              }
-            }
-          }
-        }
-      }
-    }
-  },
-  "required": []
+	"type": "object",
+	"properties":
+	{
+		"website":
+		{
+			"title": "t(website)",
+			"type": "string"
+		},
+		"infoPublic":
+		{
+			"type": "string",
+			"title": "t(study_taxonomy.vocabulary.infoPublic.title)",
+			"enum": [
+				"public",
+				"contact"
+			]
+		},
+		"methods":
+		{
+			"type": "object",
+			"title": "t(study.design)",
+			"properties":
+			{
+				"design":
+				{
+					"type": "string",
+					"title": "t(study_taxonomy.vocabulary.methods-design.title)",
+					"enum": [
+						"cohort_study",
+						"case_control",
+						"case_only",
+						"cross_sectional",
+						"clinical_trial",
+						"other"
+					]
+				},
+				"trialNumber":
+				{
+					"type": "object",
+					"format": "localizedString",
+					"title": "t(study.trial-number)"
+				},
+				"intervention":
+				{
+					"type": "string",
+					"title": "t(study_taxonomy.vocabulary.methods-intervention.title)",
+					"enum": [
+						"pharma",
+						"lifestyle",
+						"other"
+					]
+				},
+				"otherIntervention":
+				{
+					"type": "object",
+					"format": "localizedString",
+					"title": "t(study.other-intervention)"
+				},
+				"otherDesign":
+				{
+					"type": "object",
+					"format": "localizedString",
+					"title": "t(study.other-design)"
+				}
+			}
+		},
+		"timeline":
+		{
+			"type": "object",
+			"title": "t(study.timeline)",
+			"properties":
+			{
+				"startYearRec":
+				{
+					"type": "integer",
+					"title": "t(study.start-year-rec)"
+				},
+				"startMonthRec":
+				{
+					"type": "integer",
+					"title": "t(study.start-month-rec)"
+				},
+				"continueRec":
+				{
+					"type": "string",
+					"items":
+					{
+						"type": "string",
+						"enum": [
+							"yes",
+							"no"
+						]
+					},
+					"title": "t(study_taxonomy.vocabulary.timeline-continue-rec.title)"
+				},
+				"endYearRec":
+				{
+					"type": "integer",
+					"title": "t(study.end-year-rec)"
+				},
+				"endMonthRec":
+				{
+					"type": "integer",
+					"title": "t(study.end-month-rec)"
+				}
+			}
+		},
+		"recruitment":
+		{
+			"type": "string",
+			"enum": [
+				"individuals",
+				"sing_gen",
+				"multi_gen",
+				"other"
+			],
+			"title": "t(study_taxonomy.vocabulary.methods-recruitments.title)"
+		},
+		"otherRecruitment":
+		{
+			"type": "object",
+			"format": "localizedString",
+			"title": "Other type of people"
+		},
+		"numberOfParticipants":
+		{
+			"type": "object",
+			"properties":
+			{
+				"participant":
+				{
+					"type": "object",
+					"properties":
+					{
+						"number":
+						{
+							"type": "number",
+							"title": "t(numberOfParticipants.participants)"
+						},
+						"noLimit":
+						{
+							"type": "boolean",
+							"title": "t(numberOfParticipants.no-limit)"
+						}
+					}
+				},
+				"participantsActual":
+				{
+					"type": "number",
+					"title": "t(numberOfParticipants.participantsActual)"
+				},
+				"actualYear":
+				{
+					"type": "integer",
+					"title": "t(study.actual-year)"
+				},
+				"actualMonth":
+				{
+					"type": "integer",
+					"title": "t(study.actual-month)"
+				}
+			},
+			"title": "t(numberOfParticipants.label)"
+		},
+		"markerPaper":
+		{
+			"type": "string",
+			"title": "t(study.marker-paper)"
+		},
+		"pubmedId":
+		{
+			"type": "string",
+			"title": "t(study.pubmed-id)"
+		},
+		"healthInformation":
+		{
+			"type": "object",
+			"title": "Health Information",
+			"properties":
+			{
+				"healthInfo":
+				{
+					"type": "array",
+					"title": "t(study_taxonomy.vocabulary.health-information-health-info.title)",
+					"items":
+					{
+						"type": "string",
+						"enum": [
+							"AT_p",
+							"AT_i",
+							"GT_p",
+							"GT_i",
+							"T1D_p",
+							"T1D_i",
+							"T2D_p",
+							"T2D_i",
+							"GD_p",
+							"GD_i",
+							"OD_p",
+							"OD_i"
+						]
+					}
+				},
+				"otherDiab":
+				{
+					"type": "object",
+					"format": "localizedString",
+					"title": "Other types of diabetes"
+				}
+			}
+		},
+		"measureDiet":
+		{
+			"type": "string",
+			"title": "t(study_taxonomy.vocabulary.measure-diet.title)",
+			"enum": [
+				"yes",
+				"no"
+			]
+		},
+		"measurePA":
+		{
+			"type": "string",
+			"title": "t(study_taxonomy.vocabulary.measure-PA.title)",
+			"enum": [
+				"yes",
+				"no"
+			]
+		},
+		"measureDNA":
+		{
+			"type": "string",
+			"title": "t(study_taxonomy.vocabulary.measure-DNA.title)",
+			"enum": [
+				"yes",
+				"no"
+			]
+		},
+		"ethnicityRace":
+		{
+			"type": "object",
+			"properties":
+			{
+				"popSelect":
+				{
+					"title": "Choose a ethnic/racial group to add",
+					"type": "array",
+					"items":
+					{
+						"type": "object",
+						"properties":
+						{
+							"ethGroup":
+							{
+								"type": "string",
+								"title": "choose eth group",
+								"enum": [
+									"hisLat",
+									"african",
+									"east_asian"
+								]
+							},
+							"numGroup":
+							{
+								"type": "integer",
+								"title": "how many?"
+							},
+							"subformsHisLat":
+							{
+								"type": "array",
+								"items":
+								{
+									"type": "object",
+									"properties":
+									{
+										"genotypingPlat":
+										{
+											"type": "string",
+											"title": "Genotyping platform",
+											"enum": [
+												"humanHap240",
+												"humanHap300",
+												"human_CNV370",
+												"humanHap550",
+												"human610Quad",
+												"humanHap650Y",
+												"human660W",
+												"human670_QuadCustom",
+												"humanOmniExpress_12",
+												"humanOmniExpress_24",
+												"humanOmniExpressExome_8",
+												"omniExpressExome_8",
+												"humanOmni25Exome_8",
+												"humanOmniZhonghua_8",
+												"human1M",
+												"human1M_Duo",
+												"humanOmni1_Quad",
+												"humanOmni1S",
+												"human1.2MDuoCustom",
+												"humanOmni2.5_4",
+												"humanOmni2.5_8",
+												"humanOmni5_4",
+												"humanCytoSNP_12",
+												"humanCore_12",
+												"humanCore_24",
+												"humanExome_12",
+												"humanCoreExome_12",
+												"humanCoreExome_24",
+												"cardio_Metabo_Chip",
+												"CVDSNP55",
+												"psychArray",
+												"affymetrix_500K",
+												"affymetrix_6.0",
+												"other"
+											]
+										},
+										"otherGenoPlat":
+										{
+											"type": "object",
+											"format": "localizedString",
+											"title": "Other platform"
+										},
+										"numberGenoIndiv":
+										{
+											"type": "integer"
+										},
+										"imputationPanel":
+										{
+											"type": "string",
+											"title": "Imputation panel",
+											"enum": [
+												"1000G_P3_Oct_2014",
+												"1000G_P1_Jun_2014",
+												"1000G_P1_Dec_2013",
+												"1000G_P1_Sep_2013",
+												"1000G_P1_Mar_2012",
+												"1000G_P1_Jun_2011",
+												"1000G_P1_Dec_2010",
+												"1000G_Pilot_HapMap3_Jun_2010_Feb_2009",
+												"1000G_Pilot_Jun_2010",
+												"hapMap3_Feb_2009",
+												"hapMap2_Oct_2008",
+												"hapMap2_Jan_2008",
+												"hapMap2_Jul_2006",
+												"other"
+											]
+										},
+										"otherImputPanel":
+										{
+											"type": "object",
+											"format": "localizedString",
+											"title": "Other imputation panel"
+										},
+										"panelYear":
+										{
+											"type": "integer",
+											"title": "Panel Year"
+										},
+										"panelMonth":
+										{
+											"type": "integer",
+											"title": "Panel Month"
+										},
+										"referencePop":
+										{
+											"type": "string",
+											"title": "Imputation panel",
+											"enum": [
+												"All",
+												"Cosmopolitan",
+												"ASW",
+												"CEU",
+												"CHB",
+												"CHS",
+												"CLM",
+												"FIN",
+												"GBR",
+												"IBS",
+												"JPT",
+												"JPT/CHB",
+												"LWK",
+												"MXL",
+												"PUR",
+												"TSI",
+												"YRI",
+												"other"
+											]
+										},
+										"otherRefPop":
+										{
+											"type": "object",
+											"format": "localizedString",
+											"title": "Other reference population"
+										}
+									}
+								}
+							}
+						}
+					}
+
+				}
+			}
+		}
+	},
+	"required": []
 }
