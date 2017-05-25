@@ -476,7 +476,7 @@
 				"items": [
 					{
 						"type": "help",
-						"helpvalue": "<h3>Ethnic and racial groups recruited</h3>"
+						"helpvalue": "<h3>t(study.ethnic-racial-groups.title)</h3>"
 					}
 				]
 			}
@@ -492,57 +492,405 @@
 				"items": [
 					{
 						"type": "help",
-						"helpvalue": "<h5>Please answer the questions below to give</h5>"
+						"helpvalue": "<h5>t(study.ethnic-racial-groups.help)</h5>"
 					},
 					{
-						"key": "ethnicityRace.popSelect",
-						"description": "Please indicate the approximate number of participants that are of Hispanic or Latino origin",
-						"add": "Add another population",
+						"key": "ethnicityRace",
+						"add": "Add another group",
 						"style":
 						{
 							"add": "btn-success"
 						},
 						"items": [
-							"ethnicityRace.popSelect[].ethGroup",
-							"ethnicityRace.popSelect[].numGroup",
+							{
+								"key": "ethnicityRace[].ethGroup",
+								"titleMap": [
+									{
+										"value": "hisLat",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.hisLat.title)"
+									},
+									{
+										"value": "african",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.african.title)"
+									},
+									{
+										"value": "east_asian",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.east_asian.title)"
+									},
+									{
+										"value": "south_asian",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.south_asian.title)"
+									},
+									{
+										"value": "euro",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.euro.title)"
+									},
+									{
+										"value": "ind_am",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.ind_am.title)"
+									},
+									{
+										"value": "ind_aus",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.ind_aus.title)"
+									},
+									{
+										"value": "ind_pac",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.ind_pac.title)"
+									},
+									{
+										"value": "mid_east",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.mid_east.title)"
+									},
+									{
+										"value": "other",
+										"name": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.term.other.title)"
+									}
+								]
+							},
+							"ethnicityRace[].numGroup",
 
 							{
-								"key": "ethnicityRace.popSelect[].subformsHisLat",
-								
-								"add": "Add optional genotyping information",
+								"key": "ethnicityRace[].subformEthRace",
+								"condition": "model.ethnicityRace[arrayIndex].numGroup>0",
+								"add": "Add additional genotyping information",
 								"style":
 								{
 									"add": "btn-success"
 								},
 								"items": [
-									"ethnicityRace.popSelect[].subformsHisLat[].genotypingPlat",
 									{
-										"type": "section",
-										"htmlClass": "hoffset3",
-										"items": [
+										"key": "ethnicityRace[].subformEthRace[].genotypingPlat",
+										"titleMap": [
 											{
-												"key": "ethnicityRace.popSelect[].subformsHisLat[].otherGenoPlat",
-												"condition": "model.ethnicityRace,popSelect[arrayIndex].subformsHisLat[arrayIndex].genotypingPlat==\"other\""
+												"value": "humanHap240",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanHap240.title)"
+											},
+											{
+												"value": "humanHap300",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanHap300.title)"
+											},
+											{
+												"value": "human_CNV370",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human_CNV370.title)"
+											},
+											{
+												"value": "humanHap550",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanHap550.title)"
+											},
+											{
+												"value": "human610Quad",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human610Quad.title)"
+											},
+											{
+												"value": "humanHap650Y",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanHap650Y.title)"
+											},
+											{
+												"value": "human660W",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human660W.title)"
+											},
+											{
+												"value": "human670_QuadCustom",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human670_QuadCustom.title)"
+											},
+											{
+												"value": "humanOmniExpress_12",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmniExpress_12.title)"
+											},
+											{
+												"value": "humanOmniExpress_24",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmniExpress_24.title)"
+											},
+											{
+												"value": "humanOmniExpressExome_8",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmniExpressExome_8.title)"
+											},
+											{
+												"value": "omniExpressExome_8",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.omniExpressExome_8.title)"
+											},
+											{
+												"value": "humanOmni25Exome_8",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmni25Exome_8.title)"
+											},
+											{
+												"value": "humanOmniZhonghua_8",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmniZhonghua_8.title)"
+											},
+											{
+												"value": "human1M",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human1M.title)"
+											},
+											{
+												"value": "human1M_Duo",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human1M_Duo.title)"
+											},
+											{
+												"value": "humanOmni1_Quad",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmni1_Quad.title)"
+											},
+											{
+												"value": "humanOmni1S",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmni1S.title)"
+											},
+											{
+												"value": "human1.2MDuoCustom",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.human1.2MDuoCustom.title)"
+											},
+											{
+												"value": "humanOmni2.5_4",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmni2.5_4.title)"
+											},
+											{
+												"value": "humanOmni2.5_8",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmni2.5_8.title)"
+											},
+											{
+												"value": "humanOmni5_4",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanOmni5_4.title)"
+											},
+											{
+												"value": "humanCytoSNP_12",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanCytoSNP_12.title)"
+											},
+											{
+												"value": "humanCore_12",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanCore_12.title)"
+											},
+											{
+												"value": "humanCore_24",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanCore_24.title)"
+											},
+											{
+												"value": "humanExome_12",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanExome_12.title)"
+											},
+											{
+												"value": "humanCoreExome_12",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanCoreExome_12.title)"
+											},
+											{
+												"value": "humanCoreExome_24",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.humanCoreExome_24.title)"
+											},
+											{
+												"value": "cardio_Metabo_Chip",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.cardio_Metabo_Chip.title)"
+											},
+											{
+												"value": "CVDSNP55",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.CVDSNP55.title)"
+											},
+											{
+												"value": "psychArray",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.psychArray.title)"
+											},
+											{
+												"value": "affymetrix_500K",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.affymetrix_500K.title)"
+											},
+											{
+												"value": "affymetrix_6.0",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.affymetrix_6.0.title)"
+											},
+											{
+												"value": "other",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.term.other.title)"
 											}
 										]
 									},
-									"ethnicityRace.popSelect[].subformsHisLat[].numberGenoIndiv",
-									"ethnicityRace.subformsHisLat[].imputationPanel",
 									{
 										"type": "section",
 										"htmlClass": "hoffset3",
 										"items": [
 											{
-												"key": "ethnicityRace.popSelect[].subformsHisLat[].otherImputPanel",
-												"condition": "model.ethnicityRace.popSelect[arrayIndex].subformsHisLat[arrayIndex].imputationPanel==\"other\""
+												"key": "ethnicityRace[].subformEthRace[].otherGenoPlat"
+											}
+										]
+									},
+									"ethnicityRace[].subformEthRace[].numberGenoIndiv",
+									{
+										"key": "ethnicityRace[].subformEthRace[].imputationPanel",
+										"titleMap": [
+											{
+												"value": "1000G_P3_Oct_2014",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P3_Oct_2014.title)"
+											},
+											{
+												"value": "1000G_P1_Jun_2014",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P1_Jun_2014.title)"
+											},
+											{
+												"value": "1000G_P1_Dec_2013",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P1_Dec_2013.title)"
+											},
+											{
+												"value": "1000G_P1_Sep_2013",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P1_Sep_2013.title)"
+											},
+											{
+												"value": "1000G_P1_Mar_2012",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P1_Mar_2012.title)"
+											},
+											{
+												"value": "1000G_P1_Jun_2011",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P1_Jun_2011.title)"
+											},
+											{
+												"value": "1000G_P1_Dec_2010",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_P1_Dec_2010.title)"
+											},
+											{
+												"value": "1000G_Pilot_HapMap3_Jun_2010_Feb_2009",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_Pilot_HapMap3_Jun_2010_Feb_2009.title)"
+											},
+											{
+												"value": "1000G_Pilot_Jun_2010",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.1000G_Pilot_Jun_2010.title)"
+											},
+											{
+												"value": "hapMap3_Feb_2009",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.hapMap3_Feb_2009.title)"
+											},
+											{
+												"value": "hapMap2_Oct_2008",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.hapMap2_Oct_2008.title)"
+											},
+											{
+												"value": "hapMap2_Jan_2008",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.hapMap2_Jan_2008.title)"
+											},
+											{
+												"value": "hapMap2_Jul_2006",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.hapMap2_Jul_2006.title)"
+											},
+											{
+												"value": "other",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.term.other.title)"
+											}
+										]
+									},
+									{
+										"type": "section",
+										"htmlClass": "hoffset3",
+										"items": [
+											{
+												"key": "ethnicityRace[].subformEthRace[].otherImputPanel"
+											},
+											{
+												"type": "section",
+												"htmlClass": "col-xs-6",
+												"items": [
+													{
+														"key": "ethnicityRace[].subformEthRace[].panelYear"
+													}
+												]
+											},
+											{
+												"type": "section",
+												"htmlClass": "col-xs-6",
+												"items": [
+													{
+														"key": "ethnicityRace[].subformEthRace[].panelMonth"
+													}
+												]
+											}
+										]
+									},
+									{
+										"key": "ethnicityRace[].subformEthRace[].referencePop",
+										"titleMap": [
+											{
+												"value": "All",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.All.title)"
+											},
+											{
+												"value": "Cosmopolitan",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.Cosmopolitan.title)"
+											},
+											{
+												"value": "ASW",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.ASW.title)"
+											},
+											{
+												"value": "CEU",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.CEU.title)"
+											},
+											{
+												"value": "CHB",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.CHB.title)"
+											},
+											{
+												"value": "CHS",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.CHS.title)"
+											},
+											{
+												"value": "CLM",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.CLM.title)"
+											},
+											{
+												"value": "FIN",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.FIN.title)"
+											},
+											{
+												"value": "GBR",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.GBR.title)"
+											},
+											{
+												"value": "IBS",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.IBS.title)"
+											},
+											{
+												"value": "JPT",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.JPT.title)"
+											},
+											{
+												"value": "JPT/CHB",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.JPT/CHB.title)"
+											},
+											{
+												"value": "LWK",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.LWK.title)"
+											},
+											{
+												"value": "MXL",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.MXL.title)"
+											},
+											{
+												"value": "PUR",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.PUR.title)"
+											},
+											{
+												"value": "TSI",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.TSI.title)"
+											},
+											{
+												"value": "YRI",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.YRI.title)"
+											},
+											{
+												"value": "other",
+												"name": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.term.other.title)"
+											}
+										]
+									},
+
+									{
+										"type": "section",
+										"htmlClass": "hoffset3",
+										"items": [
+											{
+												"key": "ethnicityRace[].subformEthRace[].otherRefPop"
 											}
 										]
 									}
+
 								],
 								"startEmpty": true
 							}
 
 						]
+
 					}
 
 				]

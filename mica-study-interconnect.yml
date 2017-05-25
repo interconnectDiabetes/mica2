@@ -2005,3 +2005,419 @@
       "en": "Migrants"
     "description":
       "en": "Study recruits migrants"
+- "name": "ethnicityRace-ethGroup"
+  "title":
+    "en": "Ethnical and racial groups recruited to the study"
+  "description":
+    "en": "Ethnical and racial groups recruited to the study"
+  "attributes":
+    "field": "model.ethnicityRace.ethGroup"
+    "alias": "model-ethnicityRace-ethGroup"
+  "terms":
+  - "name": "hisLat"
+    "title":
+      "en": "Hispanic or Latino"
+    "description":
+      "en": "Hispanic or Latino participants"
+  - "name": "african"
+    "title":
+      "en": "African / African-American / Black"
+    "description":
+      "en": "African / African-American / Black participants"
+  - "name": "east_asian"
+    "title":
+      "en": "East or South East Asian"
+    "description":
+      "en": "East or South East Asian participants"
+  - "name": "south_asian"
+    "title":
+      "en": "South Asian / Indian Subcontinent "
+    "description":
+      "en": "South Asian / Indian Subcontinent  participants"
+  - "name": "euro"
+    "title":
+      "en": "European / White"
+    "description":
+      "en": "European / White participants"
+  - "name": "ind_am"
+    "title":
+      "en": "Indigenous American / American Indian / Native American / Alaskan Native"
+    "description":
+      "en": "Indigenous American / American Indian / Native American / Alaskan Native participants"
+  - "name": "ind_aus"
+    "title":
+      "en": "Indigenous Australian / Aboriginal Australian "
+    "description":
+      "en": "Indigenous Australian / Aboriginal Australian  participants"
+  - "name": "ind_pac"
+    "title":
+      "en": "Native Hawaiian or Other Pacific Islander"
+    "description":
+      "en": "Native Hawaiian or Other Pacific Islander participants"
+  - "name": "mid_east"
+    "title":
+      "en": "Middle Eastern"
+    "description":
+      "en": "Middle Eastern participants"
+  - "name": "other"
+    "title":
+      "en": "Other group"
+    "description":
+      "en": "Other group participants"
+- "name": "ethnicityRace-genotypingPlat"
+  "title":
+    "en": "Genotyping platform"
+  "description":
+    "en": "Genotyping platform used"
+  "attributes":
+    "field": "model.ethnicityRace.genotypingPlat"
+    "alias": "model-ethnicityRace-genotypingPlat"
+  "terms":
+  - "name": "humanHap240"
+    "title":
+      "en": "HumanHap240"
+    "description":
+      "en": "HumanHap240"
+  - "name": "humanHap300"
+    "title":
+      "en": "HumanHap300"
+    "description":
+      "en": "HumanHap300"
+  - "name": "human_CNV370"
+    "title":
+      "en": "Human CNV370"
+    "description":
+      "en": "Human CNV370"
+  - "name": "humanHap550"
+    "title":
+      "en": "HumanHap550"
+    "description":
+      "en": "HumanHap550"
+  - "name": "human610Quad"
+    "title":
+      "en": "Human610Quad"
+    "description":
+      "en": "Human610Quad"
+  - "name": "humanHap650Y"
+    "title":
+      "en": "HumanHap650Y"
+    "description":
+      "en": "HumanHap650Y"
+  - "name": "human660W"
+    "title":
+      "en": "Human660W"
+    "description":
+      "en": "Human660W"
+  - "name": "human670_QuadCustom"
+    "title":
+      "en": "Human670-QuadCustom"
+    "description":
+      "en": "Human670-QuadCustom"
+  - "name": "humanOmniExpress_12"
+    "title":
+      "en": "HumanOmniExpress-12"
+    "description":
+      "en": "HumanOmniExpress-12"
+  - "name": "humanOmniExpress_24"
+    "title":
+      "en": "HumanOmniExpress-24"
+    "description":
+      "en": "HumanOmniExpress-24"
+  - "name": "humanOmniExpressExome_8"
+    "title":
+      "en": "HumanOmniExpressExome-8"
+    "description":
+      "en": "HumanOmniExpressExome-8"
+  - "name": "omniExpressExome_8"
+    "title":
+      "en": "OmniExpressExome-8"
+    "description":
+      "en": "OmniExpressExome-8"
+  - "name": "humanOmni25Exome_8"
+    "title":
+      "en": "HumanOmni25Exome-8"
+    "description":
+      "en": "HumanOmni25Exome-8"
+  - "name": "humanOmniZhonghua_8"
+    "title":
+      "en": "HumanOmniZhongHua-8"
+    "description":
+      "en": "HumanOmniZhongHua-8"
+  - "name": "human1M"
+    "title":
+      "en": "Human1M"
+    "description":
+      "en": "Human1M"
+  - "name": "human1M_Duo"
+    "title":
+      "en": "Human1M-Duo"
+    "description":
+      "en": "Human1M-Duo"
+  - "name": "humanOmni1_Quad"
+    "title":
+      "en": "HumanOmni1-Quad"
+    "description":
+      "en": "HumanOmni1-Quad"
+  - "name": "humanOmni1S"
+    "title":
+      "en": "HumanOmni1S"
+    "description":
+      "en": "HumanOmni1S"
+  - "name": "human1.2MDuoCustom"
+    "title":
+      "en": "Human1.2MDuoCustom"
+    "description":
+      "en": "Human1.2MDuoCustom"
+  - "name": "humanOmni2.5_4"
+    "title":
+      "en": "HumanOmni2.5-4"
+    "description":
+      "en": "HumanOmni2.5-4"
+  - "name": "humanOmni2.5_8"
+    "title":
+      "en": "HumanOmni2.5-8"
+    "description":
+      "en": "HumanOmni2.5-8"
+  - "name": "humanOmni5_4"
+    "title":
+      "en": "HumanOmni5-4"
+    "description":
+      "en": "HumanOmni5-4"
+  - "name": "humanCytoSNP_12"
+    "title":
+      "en": "HumanCytoSNP-12"
+    "description":
+      "en": "HumanCytoSNP-12"
+  - "name": "humanCore_12"
+    "title":
+      "en": "HumanCore-12"
+    "description":
+      "en": "HumanCore-12"
+  - "name": "humanCore_24"
+    "title":
+      "en": "HumanCore-24"
+    "description":
+      "en": "HumanCore-24"
+  - "name": "humanExome_12"
+    "title":
+      "en": "HumanExome-12"
+    "description":
+      "en": "HumanExome-12"
+  - "name": "humanCoreExome_12"
+    "title":
+      "en": "HumanCoreExome-12"
+    "description":
+      "en": "HumanCoreExome-12"
+  - "name": "humanCoreExome_24"
+    "title":
+      "en": "HumanCoreExome-24"
+    "description":
+      "en": "HumanCoreExome-24"
+  - "name": "cardio_Metabo_Chip"
+    "title":
+      "en": "Cardio-Metabo_Chip"
+    "description":
+      "en": "Cardio-Metabo_Chip"
+  - "name": "CVDSNP55"
+    "title":
+      "en": "CVDSNP55"
+    "description":
+      "en": "CVDSNP55"
+  - "name": "psychArray"
+    "title":
+      "en": "PsychArray"
+    "description":
+      "en": "PsychArray"
+  - "name": "affymetrix_500K"
+    "title":
+      "en": "Affymetrix 500K (Nsp and Sty Chips)"
+    "description":
+      "en": "Affymetrix 500K (Nsp and Sty Chips)"
+  - "name": "affymetrix_6.0"
+    "title":
+      "en": "Affymetrix 6.0 (1M chip)"
+    "description":
+      "en": "Affymetrix 6.0 (1M chip)"
+  - "name": "other"
+    "title":
+      "en": "Other"
+    "description":
+      "en": "Other" 
+- "name": "ethnicityRace-imputationPanel"
+  "title":
+    "en": "Imputation panel"
+  "description":
+    "en": "Imputation panel used"
+  "attributes":
+    "field": "model.ethnicityRace.imputationPanel"
+    "alias": "model-ethnicityRace-imputationPanel"
+  "terms":
+  - "name": "1000G_P3_Oct_2014"
+    "title":
+      "en": "1000G P3 (Oct 2014)"
+    "description":
+      "en": "1000G P3 (Oct 2014)"
+  - "name": "1000G_P1_Jun_2014"
+    "title":
+      "en": "1000G P1 (Jun 2014)"
+    "description":
+      "en": "1000G P1 (Jun 2014)"
+  - "name": "1000G_P1_Dec_2013"
+    "title":
+      "en": "1000G P1 (Dec 2013)"
+    "description":
+      "en": "1000G P1 (Dec 2013)"
+  - "name": "1000G_P1_Sep_2013"
+    "title":
+      "en": "1000G P1 (Sep 2013)"
+    "description":
+      "en": "1000G P1 (Sep 2013)"
+  - "name": "1000G_P1_Mar_2012"
+    "title":
+      "en": "1000G P1 (Mar 2012)"
+    "description":
+      "en": "1000G P1 (Mar 2012)"
+  - "name": "1000G_P1_Jun_2011"
+    "title":
+      "en": "1000G P1 (Jun 2011)"
+    "description":
+      "en": "1000G P1 (Jun 2011)"
+  - "name": "1000G_P1_Dec_2010"
+    "title":
+      "en": "1000G P1 (Dec 2010)"
+    "description":
+      "en": "1000G P1 (Dec 2010)"
+  - "name": "1000G_Pilot_HapMap3_Jun_2010_Feb_2009"
+    "title":
+      "en": "1000G Pilot / HapMap3 (Jun 2010 / Feb 2009)"
+    "description":
+      "en": "1000G Pilot / HapMap3 (Jun 2010 / Feb 2009)"
+  - "name": "1000G_Pilot_Jun_2010"
+    "title":
+      "en": "1000G Pilot (Jun 2010)"
+    "description":
+      "en": "1000G Pilot (Jun 2010)"
+  - "name": "hapMap3_Feb_2009"
+    "title":
+      "en": "HapMap3 (Feb 2009)"
+    "description":
+      "en": "HapMap3 (Feb 2009)"
+  - "name": "hapMap2_Oct_2008"
+    "title":
+      "en": "HapMap2 (Oct 2008)"
+    "description":
+      "en": "HapMap2 (Oct 2008)"
+  - "name": "hapMap2_Jan_2008"
+    "title":
+      "en": "HapMap2 (Jan 2008)"
+    "description":
+      "en": "HapMap2 (Jan 2008)"
+  - "name": "hapMap2_Jul_2006"
+    "title":
+      "en": "HapMap2 (Jul 2006)"
+    "description":
+      "en": "HapMap2 (Jul 2006)"
+  - "name": "other"
+    "title":
+      "en": "Other"
+    "description":
+      "en": "Other"
+- "name": "ethnicityRace-referencePop"
+  "title":
+    "en": "Reference population"
+  "description":
+    "en": "Reference population used"
+  "attributes":
+    "field": "model.ethnicityRace.referencePop"
+    "alias": "model-ethnicityRace-referencePop"
+  "terms":
+  - "name": "All"
+    "title":
+      "en": "All"
+    "description":
+      "en": "All"
+  - "name": "Cosmopolitan"
+    "title":
+      "en": "Cosmopolitan"
+    "description":
+      "en": "Cosmopolitan"
+  - "name": "ASW"
+    "title":
+      "en": "ASW"
+    "description":
+      "en": "ASW"
+  - "name": "CEU"
+    "title":
+      "en": "CEU"
+    "description":
+      "en": "CEU"
+  - "name": "CHB"
+    "title":
+      "en": "CHB"
+    "description":
+      "en": "CHB"
+  - "name": "CHS"
+    "title":
+      "en": "CHS"
+    "description":
+      "en": "CHS"
+  - "name": "CLM"
+    "title":
+      "en": "CLM"
+    "description":
+      "en": "CLM"
+  - "name": "FIN"
+    "title":
+      "en": "FIN"
+    "description":
+      "en": "FIN"
+  - "name": "GBR"
+    "title":
+      "en": "GBR"
+    "description":
+      "en": "GBR"
+  - "name": "IBS"
+    "title":
+      "en": "IBS"
+    "description":
+      "en": "IBS"
+  - "name": "JPT"
+    "title":
+      "en": "JPT"
+    "description":
+      "en": "JPT"
+  - "name": "JPT/CHB"
+    "title":
+      "en": "JPT/CHB"
+    "description":
+      "en": "JPT/CHB"
+  - "name": "LWK"
+    "title":
+      "en": "LWK"
+    "description":
+      "en": "LWK"
+  - "name": "MXL"
+    "title":
+      "en": "MXL"
+    "description":
+      "en": "MXL"
+  - "name": "PUR"
+    "title":
+      "en": "PUR"
+    "description":
+      "en": "PUR"
+  - "name": "TSI"
+    "title":
+      "en": "TSI"
+    "description":
+      "en": "TSI"
+  - "name": "YRI"
+    "title":
+      "en": "YRI"
+    "description":
+      "en": "YRI"
+  - "name": "other"
+    "title":
+      "en": "Other"
+    "description":
+      "en": "Other"
