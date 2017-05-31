@@ -1408,7 +1408,7 @@
     "alias": "populations-model-selectionCriteria-ageMax"
 - "name": "populations-selectionCriteria-gender"
   "title":
-    "en": "Selection criteria - Sex"
+    "en": "Gender"
     "fr": "Critères de sélection - Genre"
   "description":
     "en": "Participant’s sex"
@@ -1900,25 +1900,6 @@
       "en": "No"
     "description":
       "en": "Does not have measures of diet"
-- "name": "measure-PA"
-  "title":
-    "en": "Does the study have measures of physical activity?"
-  "description":
-    "en": "Does the study have measures of physical activity?"
-  "attributes":
-    "field": "model.measurePA"
-    "alias": "model-measurePA"
-  "terms":
-  - "name": "yes"
-    "title":
-      "en": "Yes"
-    "description":
-      "en": "Has measures of physical activity"
-  - "name": "no"
-    "title":
-      "en": "No"
-    "description":
-      "en": "Does not have measures of physical activity"
 - "name": "measure-PA"
   "title":
     "en": "Does the study have measures of physical activity?"

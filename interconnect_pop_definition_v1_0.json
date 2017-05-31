@@ -4,6 +4,11 @@
     "helpvalue": "<h4>t(study.selection-criteria.label)</h4>"
   },
   {
+    "type": "help",
+    "helpvalue": "Specify the criteria that were used to select participants (i.e. the selection criteria used to inform recruitment, not the characteristics of the participants actually recruited) "
+  },
+  
+  {
     "type": "section",
     "htmlClass": "row",
     "items": [
@@ -65,6 +70,7 @@
         "items": [
           {
             "key": "selectionCriteria.healthStatus",
+			"description": "Specify any specific health status criteria that were used to recruit participants",
             "add": "t(study.selection-criteria.add-health-status)",
             "style": {
               "add": "btn-info"
