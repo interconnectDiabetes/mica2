@@ -8,8 +8,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-dpm($population);
-dpm($specific_population);
+//dpm($population);
+//dpm($specific_population);
 ?>
 
 <h3 class="no-top-margin">

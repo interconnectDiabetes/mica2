@@ -1,0 +1,132 @@
+.navbar-default {
+  background-color: #999;
+  border-color: transparent;
+}
+
+
+
+
+
+
+.field-type-date fieldset .fieldset-legend {
+  font-size: 12px;
+  color: #445668;
+  padding: 7px 0 2px;
+  font-weight: normal;
+}
+.field-type-date fieldset {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 7px 0 0 0;
+}
+.field-type-date fieldset label {
+  display: none;
+}
+.field-type-date fieldset .date-padding {
+  padding: 0;
+}
+	
+.table-striped tbody tr td.views-field.views-field-field-number-of-participants-ic {
+	text-align: center;
+	}
+
+.front .page-header{
+   display:none
+}
+
+body.toolbar-drawer {
+	padding-top: 150px !important;
+}
+
+
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable[style] {
+	display: block; height: auto; width: 947.25px; top: 100px !important; left: 154px;
+}
+
+.help-block {
+	padding-top: 10px;
+}
+legend {
+	border-style: none none none none;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.option {
+	padding-left: 20px;
+}
+
+.navbar .nav > li > a:hover {
+    color: #FC0;
+    text-decoration: none;
+}
+
+.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+color: #FC0;
+text-decoration: none;
+background-color: transparent;
+box-shadow: none;
+
+}
+
+.navbar .nav > li > a {
+    text-shadow: none;
+	color: #FFF;
+	padding: 15px 10px;
+		font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size:14px;
+	font-weight: bold;
+}
+
+.navbar-inner {
+    background-color: #999;
+	background-image: none;
+	text-shadow: none;
+	border: none;
+	padding: 5px 10px;
+		text-transform:uppercase;
+
+	margin:0;
+
+	line-height:1.5;
+	color:#495961;
+	font-weight:4000;
+	text-shadow: none;
+	background-color: #999; 
+	text-shadow: none;
+	
+}
+
+header#navbar a.logo img{width:auto;height:50px}
+
+#user-menu {
+	padding: 5px 0px 0px;
+	vertical-align: text-bottom;
+}
+
+.input-append {
+	padding: 5px;
+}
+.form-search .input-append .search-query {
+    padding-top: 6px;
+    padding-bottom: calc(9px);
+    border-color: #CCC #CCC #B3B3B3;
+}
+td {	
+	border-top: 1px solid #DDD;
+	padding: 0.6rem 0px;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li {
+    background: none repeat scroll 0% 0% #EEE;
+    border-bottom: 1px solid #CCC;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li.selected {
+    border-bottom: 1px solid #FFF;
+}
+
+input.error {
+    color: #B94A48;
+    border-color: #B94A48;
