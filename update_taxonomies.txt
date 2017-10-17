@@ -1,0 +1,55 @@
+* stop mica
+* go to mongo console and execute these commands:
+
+
+- use mica
+- db.getCollection('taxonomyEntityWrapper').drop()
+
+* in the configuration directory (most likely /etc/mica2), add a folder named "taxonomies"
+* then in this folder add the file: mica-taxonomy.yml
+
+* modify it, with the constraint that the list of vocabularies are named after the document types: variable, dataset, study, network. You can choose to order items as you like, add or remove some as soon as the leafs identify the document  
+type specific taxonomies with their name (Mlstr_area, Mica_study etc.) 
+
+if you wish to modify the a particular document's taxonomies, say Stduy, you can add your mica-study.yml and place it in the same folder (/etc/mica2). Remember that the fields references by each vocabulary must exist in the Study document. May be you can start by configuring your Study document first and then the create your taxonomy file.
+
+You can then continue restart mica.
+
+taxonomy originals:
+https://github.com/obiba/mica2/blob/master/mica-core/src/main/resources/taxonomies/mica-study.yml
+
+installing client
+
+http://howtoubuntu.org/how-to-install-lamp-on-ubuntu
+
+sudo apt-get install php5-common php5-mysql
+ sudo apt-get install php5-curl
+
+sudo /etc/init.d/apache2 reload
+
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+sudo chown -R $USER .composer/
+
+composer global require drush/drush:7.*
+echo "export PATH=\$HOME/.composer/vendor/bin:\$PATH" | tee -a $HOME/.bashrc
+source .bashrc
+
+Make a directory, change to it
+
+sudo mkdir /var/www/html/drupal
+echo "alias drush='sudo -u www-data drush'" >> ~/.bash_aliases 
+sudo chown -R www-data /var/www/html/drupal
+
+
+mkdir ./sites/default/files
+chmod -R 777 ./sites/default/files
+cp  ./sites/default/default.settings.php  ./sites/default/settings.php
+chmod -R 777 ./sites/default/settings.php
+
+php7 
+
+sudo apt-get install php-xml
+ sudo apt-get install php7.0-gd
+sudo apt-get install php7.0-mbstring
+

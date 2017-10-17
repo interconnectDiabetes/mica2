@@ -8,7 +8,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-//dpm($population);
+
 //dpm($specific_population);
 ?>
 
@@ -126,12 +126,20 @@
         </tr>
       <?php endif; ?>
 
-      <?php if (!empty($population->model->selectionCriteria->criteria)): ?>
-        <t>
-          <th><?php print t('Criteria') ?></th>
-          <td><?php print $selection_criteria ?></td>
-        </t>
-      <?php endif ?>
+		<?php if (!empty($population->model->selectionCriteria->criteria)): ?>
+			<tr>
+			  <th><?php print t('Criteria'); ?></th>
+			  <td>
+				<ul class="list-unstyled">
+				  <?php foreach ($population->model->selectionCriteria->criteria as $criteria): ?>
+					<li>
+					  <?php print $localize->getTranslation("study_taxonomy.vocabulary.populations-selectionCriteria-criteria.term." . $criteria . ".title"); ?>
+					</li>
+				  <?php endforeach; ?>
+				</ul>
+			  </td>
+			</tr>
+		<?php endif; ?>
 
       <?php if (!empty($population->model->selectionCriteria->healthStatus)  && !empty(array_filter($population->model->selectionCriteria->healthStatus, 'obiba_mica_commons_array_empty_test'))): ?>
         <tr>

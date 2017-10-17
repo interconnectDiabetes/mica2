@@ -1,1 +1,50 @@
-{"en":{"numberOfParticipants":{"participants":"Target number of participants","no-limit":"No Limits in the number of participants","participantsActual":"Actual Number of Participants","title":"","sfhsdjfhshsd":"","participants-label":"Number of participants planned to be recruited. If the study is completed, enter the final number of participants.","participantsActual-label":"What is the total number of participants who have been recruited to the study?"},"study":{"general-design":"Methods","marker-paper":"Study Reference Paper","pubmed-id":"Study reference paper's Pubmed ID","trial-number":"Trial registration number","intervention":"","other-intervention":"Other intervention type","start-month-rec":"Month","start-year-rec":"Year","timeline-description":"","recruitment-continuing":{"label":"Is recruitment continuing?"},"recruitment-end-description":"If recruitment has finished, when did it end?","recruitment-start-description":"When did recruitment start?","end-year-rec":"Year","end-month-rec":"Month","actual-year":"Year","actual-month":"Month","participantsActual-date-description":"At what date was this number recorded?","ethnic":{"label":"Ethnic and racial groups recruited"},"marker-paper-info":"If applicable, enter a bibliographic citation (i.e. published sources such as journal article, web site, or report) which should be used to refer to your study.","other-design-info":"Please specify the other study design","other-intervention-info":"Please specify the other intervention types"},"info":{"public":"This information has been verified by a contact associated with the study"}}}
+{
+  "en": {
+    "numberOfParticipants": {
+      "participants": "Target number of participants",
+      "no-limit": "No Limits in the number of participants",
+      "participantsActual": "Actual Number of Participants",
+      "title": "",
+      "participants-label": "Number of participants planned to be recruited. If the study is completed, enter the final number of participants.",
+      "participantsActual-label": "What is the total number of participants who have been recruited to the study?"
+    },
+    "study": {
+      "general-design": "Methods",
+      "marker-paper": "Study Reference Paper",
+      "pubmed-id": "Study reference paper's Pubmed ID",
+      "trial-number": "Trial registration number",
+      "intervention": "",
+      "other-intervention": "Other intervention type",
+      "start-month-rec": "Month",
+      "start-year-rec": "Year",
+      "timeline-description": "",
+      "recruitment-continuing": {
+        "label": "Is recruitment continuing?"
+      },
+      "recruitment-end-description": "If recruitment has finished, when did it end?",
+      "recruitment-start-description": "When did recruitment start?",
+      "end-year-rec": "Year",
+      "end-month-rec": "Month",
+      "actual-year": "Year",
+      "actual-month": "Month",
+      "participantsActual-date-description": "At what date was this number recorded?",
+      "marker-paper-info": "If applicable, enter a bibliographic citation (i.e. published sources such as journal article, web site, or report) which should be used to refer to your study.",
+      "other-design-info": "Please specify the other study design",
+      "other-intervention-info": "Please specify the other intervention types",
+      "ethnic-racial-groups": {
+        "label": "Ethnic / racial group information",
+        "help": "Please answer the questions below to give an indication of the broad categories of ethnic and racial groups that have been recruited to the study. The information requested is simply an approximation about the study as a whole using the broad categories below, not a detailed analysis based on specific responses to questionnaires from participants within the study.",
+        "title": "Ethnic and racial groups recruited",
+        "num": {
+          "title": "Number of individuals in group"
+        }
+      },
+      "geno-plats": {
+        "label": "Ethnic / racial group genotyping information"
+      }
+    },
+    "info": {
+      "public": "This information has been verified by a contact associated with the study"
+    }
+  }
+}

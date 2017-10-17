@@ -1,0 +1,140 @@
+{
+  "type": "object",
+  "properties": {
+    "website": {
+      "title": "t(website)",
+      "type": "string"
+    },
+    "funding": {
+      "type": "object",
+      "format": "localizedString",
+      "title": "t(funding)"
+    },
+    "info": {
+      "type": "object",
+      "format": "localizedString",
+      "title": "t(suppl-info)"
+    },
+    "methods": {
+      "type": "object",
+      "title": "t(study.design)",
+      "properties": {
+        "design": {
+          "type": "string",
+          "title": "t(study_taxonomy.vocabulary.methods-design.title)",
+          "enum": [
+            "cohort_study",
+            "case_control",
+            "case_only",
+            "cross_sectional",
+            "clinical_trial",
+            "other"
+          ]
+        },
+        "otherDesign": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(study.other-design)"
+        },
+        "followUpInfo": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(study.follow-up)"
+        },
+        "recruitments": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "individuals",
+              "families",
+              "other"
+            ]
+          },
+          "title": "t(study.recruitment-sources.label)"
+        },
+        "otherRecruitment": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(study.recruitment-sources.other)"
+        },
+        "info": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(suppl-info)"
+        }
+      }
+    },
+    "numberOfParticipants": {
+      "type": "object",
+      "properties": {
+        "participant": {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": "number",
+              "title": "t(numberOfParticipants.participants)"
+            },
+            "noLimit": {
+              "type": "boolean",
+              "title": "t(numberOfParticipants.no-limit)"
+            }
+          }
+        },
+        "sample": {
+          "type": "object",
+          "properties": {
+            "number": {
+              "type": "number",
+              "title": "t(numberOfParticipants.sample)"
+            },
+            "noLimit": {
+              "type": "boolean",
+              "title": "t(numberOfParticipants.no-limit)"
+            }
+          }
+        },
+        "info": {
+          "type": "object",
+          "format": "localizedString",
+          "title": "t(numberOfParticipants.suppl-info)"
+        }
+      },
+      "title": "t(numberOfParticipants.label)"
+    },
+    "startYear": {
+      "type": "integer",
+      "title": "t(study.start-year)"
+    },
+    "endYear": {
+      "type": "integer",
+      "title": "t(study.end-year)"
+    },
+    "access": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "data",
+          "bio_samples",
+          "other"
+        ]
+      },
+      "title": "t(study.access.label)"
+    },
+    "otherAccess": {
+      "type": "object",
+      "format": "localizedString",
+      "title": "t(study.access.other)"
+    },
+    "markerPaper": {
+      "type": "string",
+      "title": "t(study.marker-paper)"
+    },
+    "pubmedId": {
+      "type": "string",
+      "title": "t(study.pubmed-id)"
+    }
+  },
+  "required": []
+}

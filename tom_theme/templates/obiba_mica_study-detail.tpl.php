@@ -8,7 +8,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-//dpm($study_dto)
+dpm($study_dto)
 ?>
 
 <?php if (!empty($populations)): ?>
@@ -205,7 +205,7 @@
           <?php endif; ?>
           <?php if (!empty($study_dto->model->numberOfParticipants->participant->number) || !empty($study_dto->model->numberOfParticipants->participant->noLimit)): ?>
             <tr>
-              <th><?php print variable_get_value('study_target_number_participant_label') ?></th>
+              <th><?php print $localize->getTranslation('numberOfParticipants.participants') ?></th>
               <td>
                 <p>
                   <?php if (!empty($study_dto->model->numberOfParticipants->participant->number)) {
@@ -353,6 +353,100 @@
             </p>
           <?php endif; ?>
         <?php endif; ?>
+      </div>
+    </div>
+
+  </section>
+  
+  <section>
+
+    <div class="row">
+      <div class="col-lg-6 col-xs-12">
+        <!-- ETHNIC / RACIAL GROUPS -->
+        <h2 id="ethnic"><?php print t('Broad categories of ethnic and racial groups recruited') ?></h2>
+        <div class="table-responsive">
+          <table class="table table-striped valign-table-column">
+            <tbody>
+			<?php if (!empty($study_dto->model->ethnicityRace)): ?>
+				<tr>
+				  <th><?php print t('Ethnic or racial group'); ?></th>
+				  <th><?php print t('Approximate number of participants'); ?></th>
+				</tr>
+			  <?php foreach ($study_dto->model->ethnicityRace as $ethnic): ?>
+				<tr>
+					<td>
+					<?php if (!empty($ethnic->ethGroup)): ?>
+					  <?php print $localize->getTranslation("study_taxonomy.vocabulary.ethnicityRace-ethGroup.term." . $ethnic->ethGroup . ".title"); ?>
+					  <?php if (stristr($ethnic->ethGroup, 'other') && !empty($ethnic->otherEthGroup)): ?>
+						 : <?php print obiba_mica_commons_get_localized_field($ethnic->otherEthGroup); ?>
+					  <?php endif; ?>
+					<?php endif; ?>
+					</td>
+					<td>
+					<?php if (!empty($ethnic->numGroup)): ?>
+					  <?php print $ethnic->numGroup; ?>
+					<?php endif; ?>
+					</td>
+				</tr>
+			  <?php endforeach; ?>
+			<?php endif; ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xs-12">
+        <!-- GENOTYPING -->
+        <?php if (!empty($study_dto->model->genoPlats)): ?>
+          <h2 id="geno"><?php print t('Genotyping information') ?></h2>
+            <div class="table-responsive">
+				<table class="table table-striped valign-table-column">
+					<tbody>
+						<tr>
+						  <th><?php print $localize->getTranslation("study_taxonomy.vocabulary.genoPlats-genotypingPlat.title"); ?></th>
+						  <th><?php print t("Number of Individuals"); ?></th>
+						  <th><?php print $localize->getTranslation("study_taxonomy.vocabulary.genoPlats-imputationPanel.title"); ?></th>
+						  <th><?php print $localize->getTranslation("study_taxonomy.vocabulary.genoPlats-referencePop.title"); ?></th>
+						</tr>
+					  <?php foreach ($study_dto->model->genoPlats as $geno): ?>
+						<tr>
+							<td>
+							<?php if (!empty($geno->genotypingPlat)): ?>
+							  <?php print $localize->getTranslation("study_taxonomy.vocabulary.genoPlats-genotypingPlat.term." . $geno->genotypingPlat . ".title"); ?>
+							  <?php if (stristr($geno->genotypingPlat, 'other') && !empty($geno->otherGenoPlat)): ?>
+								 : <?php print $geno->otherGenoPlat; ?>
+							  <?php endif; ?>
+							<?php endif; ?>
+							</td>
+							<td>
+							<?php if (!empty($geno->numberGenoIndiv)): ?>
+							  <?php print $geno->numberGenoIndiv; ?>
+							<?php endif; ?>
+							</td>
+							<td>
+							<?php if (!empty($geno->imputationPanel)): ?>
+							  <?php print $localize->getTranslation("study_taxonomy.vocabulary.genoPlats-imputationPanel.term." . $geno->imputationPanel . ".title"); ?>
+							  <?php if (stristr($geno->imputationPanel, 'other') && !empty($geno->otherImputPanel)): ?>
+								 : <?php print $geno->otherImputPanel; ?>
+										<?php if (!empty($geno->panelYear)): ?>
+											(<?php print obiba_mica_commons_format_year($geno->panelYear, !empty($geno->panelMonth) ? $geno->panelMonth : NULL); ?>)
+										<?php endif; ?>
+							  <?php endif; ?>
+							<?php endif; ?>
+							</td>
+							<td>
+							<?php if (!empty($geno->referencePop)): ?>
+							  <?php print $localize->getTranslation("study_taxonomy.vocabulary.genoPlats-referencePop.term." . $geno->referencePop . ".title"); ?>
+							  <?php if (stristr($geno->referencePop, 'other') && !empty($geno->otherRefPop)): ?>
+								 : <?php print $geno->otherRefPop; ?>
+							  <?php endif; ?>
+							<?php endif; ?>
+							</td>
+						</tr>
+					  <?php endforeach; ?>
+					</tbody>
+				</table>
+			</div>
+		<?php endif; ?>
       </div>
     </div>
 

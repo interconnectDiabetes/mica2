@@ -1,0 +1,159 @@
+{
+  "type": "object",
+  "properties": {
+    "ethnicityRace": {
+      "title": "t(study.ethnic-racial-groups.label)",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ethGroup": {
+            "type": "string",
+            "title": "t(study_taxonomy.vocabulary.ethnicityRace-ethGroup.title)",
+            "enum": [
+              "hisLat",
+              "african",
+              "east_asian",
+              "south_asian",
+              "euro",
+              "ind_am",
+              "ind_aus",
+              "ind_pac",
+              "mid_east",
+              "other"
+            ]
+          },
+          "otherEthGroup": {
+            "type": "object",
+            "format": "localizedString",
+            "title": "Other ethnic / racial group"
+          },
+          "numGroup": {
+            "type": "integer",
+            "title": "t(study.ethnic-racial-groups.num.title)"
+          }
+        }
+      }
+    },
+    "genoPlats": {
+      "title": "t(study.geno-plats.label)",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "genotypingPlat": {
+            "type": "string",
+            "title": "t(study_taxonomy.vocabulary.ethnicityRace-genotypingPlat.title)",
+            "enum": [
+              "humanHap240",
+              "humanHap300",
+              "human_CNV370",
+              "humanHap550",
+              "human610Quad",
+              "humanHap650Y",
+              "human660W",
+              "human670_QuadCustom",
+              "humanOmniExpress_12",
+              "humanOmniExpress_24",
+              "humanOmniExpressExome_8",
+              "omniExpressExome_8",
+              "humanOmni25Exome_8",
+              "humanOmniZhonghua_8",
+              "human1M",
+              "human1M_Duo",
+              "humanOmni1_Quad",
+              "humanOmni1S",
+              "human1-2MDuoCustom",
+              "humanOmni2-5_4",
+              "humanOmni2-5_8",
+              "humanOmni5_4",
+              "humanCytoSNP_12",
+              "humanCore_12",
+              "humanCore_24",
+              "humanExome_12",
+              "humanCoreExome_12",
+              "humanCoreExome_24",
+              "cardio_Metabo_Chip",
+              "CVDSNP55",
+              "psychArray",
+              "affymetrix_500K",
+              "affymetrix_6-0",
+              "other"
+            ]
+          },
+          "otherGenoPlat": {
+            "type": "string",
+            "title": "Other platform"
+          },
+          "numberGenoIndiv": {
+            "type": "integer",
+            "title": "Number of Individuals"
+          },
+          "imputationPanel": {
+            "type": "string",
+            "title": "t(study_taxonomy.vocabulary.ethnicityRace-imputationPanel.title)",
+            "enum": [
+              "1000G_P3_Oct_2014",
+              "1000G_P1_Jun_2014",
+              "1000G_P1_Dec_2013",
+              "1000G_P1_Sep_2013",
+              "1000G_P1_Mar_2012",
+              "1000G_P1_Jun_2011",
+              "1000G_P1_Dec_2010",
+              "1000G_Pilot_HapMap3_Jun_2010_Feb_2009",
+              "1000G_Pilot_Jun_2010",
+              "hapMap3_Feb_2009",
+              "hapMap2_Oct_2008",
+              "hapMap2_Jan_2008",
+              "hapMap2_Jul_2006",
+              "other"
+            ]
+          },
+          "otherImputPanel": {
+            "type": "string",
+            "format": "localizedString",
+            "title": "Other imputation panel"
+          },
+          "panelYear": {
+            "type": "integer",
+            "title": "Panel Year"
+          },
+          "panelMonth": {
+            "type": "integer",
+            "title": "Panel Month"
+          },
+          "referencePop": {
+            "type": "string",
+            "title": "t(study_taxonomy.vocabulary.ethnicityRace-referencePop.title)",
+            "enum": [
+              "All",
+              "Cosmopolitan",
+              "ASW",
+              "CEU",
+              "CHB",
+              "CHS",
+              "CLM",
+              "FIN",
+              "GBR",
+              "IBS",
+              "JPT",
+              "JPT_CHB",
+              "LWK",
+              "MXL",
+              "PUR",
+              "TSI",
+              "YRI",
+              "other"
+            ]
+          },
+          "otherRefPop": {
+            "type": "string",
+            "format": "localizedString",
+            "title": "Other reference population"
+          }
+        }
+      }
+    }
+  },
+  "required": []
+}

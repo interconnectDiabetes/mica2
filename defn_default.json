@@ -1,0 +1,240 @@
+[
+  {
+    "type": "help",
+    "helpvalue": "<div class='alert alert-info' role='alert'><strong>License Info.</strong>This model (version <a href='https://github.com/maelstrom-research/maelstrom-models/tree/1.1.3' target='_blank'>1.1.3</a>) was released by <a href='https://www.maelstrom-research.org/' target='_blank'>Maelstrom Research</a> under the <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/' target='_blank'>Creative Commons License with Non Commercial and No Derivatives</a> constraints.</div>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          "startYear",
+          "endYear",
+          "website"
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          "funding",
+          {
+            "key": "info",
+            "type": "localizedstring",
+            "rows": 3,
+            "marked": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>t(study.general-design)</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "methods",
+            "notitle": true,
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "<h4>t(study.design)</h4>"
+              },
+              {
+                "key": "methods.design",
+                "notitle": true,
+                "type": "radios",
+                "description": "t(study_taxonomy.vocabulary.methods-design.description)",
+                "titleMap": [
+                  {
+                    "value": "cohort_study",
+                    "name": "t(study_taxonomy.vocabulary.methods-design.term.cohort_study.title)"
+                  },
+                  {
+                    "value": "case_control",
+                    "name": "t(study_taxonomy.vocabulary.methods-design.term.case_control.title)"
+                  },
+                  {
+                    "value": "case_only",
+                    "name": "t(study_taxonomy.vocabulary.methods-design.term.case_only.title)"
+                  },
+                  {
+                    "value": "cross_sectional",
+                    "name": "t(study_taxonomy.vocabulary.methods-design.term.cross_sectional.title)"
+                  },
+                  {
+                    "value": "clinical_trial",
+                    "name": "t(study_taxonomy.vocabulary.methods-design.term.clinical_trial.title)"
+                  },
+                  {
+                    "value": "other",
+                    "name": "t(study_taxonomy.vocabulary.methods-design.term.other.title)"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "methods.otherDesign",
+                    "condition": "model.methods.design==\"other\""
+                  }
+                ]
+              },
+              {
+                "key": "methods.followUpInfo",
+                "type": "localizedstring",
+                "rows": 3,
+                "marked": true,
+                "description": "t(study.follow-up-help)"
+              },
+              {
+                "key": "methods.info",
+                "type": "localizedstring",
+                "rows": 3,
+                "marked": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h4>t(study.recruitment-sources.label)</h4>"
+          },
+          {
+            "key": "methods.recruitments",
+            "notitle": true,
+            "description": "t(study_taxonomy.vocabulary.methods-recruitments.description)",
+            "titleMap": [
+              {
+                "value": "individuals",
+                "name": "t(study_taxonomy.vocabulary.methods-recruitments.term.individuals.title)"
+              },
+              {
+                "value": "families",
+                "name": "t(study_taxonomy.vocabulary.methods-recruitments.term.families.title)"
+              },
+              {
+                "value": "other",
+                "name": "t(study_taxonomy.vocabulary.methods-recruitments.term.other.title)"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "methods.otherRecruitment",
+                "condition": "model.methods.recruitments.indexOf(\"other\")>=0"
+              }
+            ]
+          },
+          {
+            "type": "help",
+            "helpvalue": "<h4>t(numberOfParticipants.label)</h4>"
+          },
+          {
+            "key": "numberOfParticipants",
+            "notitle": true,
+            "items": [
+              {
+                "key": "numberOfParticipants.participant",
+                "notitle": true
+              },
+              {
+                "key": "numberOfParticipants.sample",
+                "notitle": true
+              },
+              {
+                "key": "numberOfParticipants.info",
+                "rows": 3,
+                "marked": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h3>t(study.access.label)</h3>"
+          },
+          {
+            "key": "access",
+            "notitle": true,
+            "description": "t(study_taxonomy.vocabulary.access.description)",
+            "titleMap": [
+              {
+                "value": "data",
+                "name": "t(study_taxonomy.vocabulary.access.term.data.title)"
+              },
+              {
+                "value": "bio_samples",
+                "name": "t(study_taxonomy.vocabulary.access.term.bio_samples.title)"
+              },
+              {
+                "value": "other",
+                "name": "t(study_taxonomy.vocabulary.access.term.other.title)"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "otherAccess",
+                "type": "localizedstring",
+                "rows": 2,
+                "condition": "model.access.indexOf(\"other\")>=0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h3>t(study.marker-paper)</h3>"
+          },
+          {
+            "key": "markerPaper",
+            "type": "textarea",
+            "notitle": true
+          },
+          "pubmedId"
+        ]
+      }
+    ]
+  }
+]

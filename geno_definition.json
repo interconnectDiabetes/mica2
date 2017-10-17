@@ -632,15 +632,15 @@
                   },
                   {
                     "value": "human1.2MDuoCustom",
-                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.human1.2MDuoCustom.title)"
+                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.human1-2MDuoCustom.title)"
                   },
                   {
                     "value": "humanOmni2.5_4",
-                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.humanOmni2.5_4.title)"
+                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.humanOmni2-5_4.title)"
                   },
                   {
                     "value": "humanOmni2.5_8",
-                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.humanOmni2.5_8.title)"
+                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.humanOmni2-5_8.title)"
                   },
                   {
                     "value": "humanOmni5_4",
@@ -688,7 +688,7 @@
                   },
                   {
                     "value": "affymetrix_6.0",
-                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.affymetrix_6.0.title)"
+                    "name": "t(study_taxonomy.vocabulary.genoPlats-genotypingPlat.term.affymetrix_6-0.title)"
                   },
                   {
                     "value": "other",
@@ -771,30 +771,16 @@
               {
                 "type": "section",
                 "htmlClass": "hoffset3",
+                "condition": "model.genoPlats[arrayIndex].imputationPanel==\"other\"",
                 "items": [
                   {
-                    "key": "genoPlats[].otherImputPanel",
-                    "condition": "model.genoPlats[arrayIndex].imputationPanel==\"other\""
+                    "key": "genoPlats[].otherImputPanel"
                   },
                   {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "condition": "model.genoPlats[arrayIndex].imputationPanel==\"other\"",
-                    "items": [
-                      {
-                        "key": "genoPlats[].panelYear"
-                      }
-                    ]
+                    "key": "genoPlats[].panelYear"
                   },
                   {
-                    "type": "section",
-                    "htmlClass": "col-xs-6",
-                    "condition": "model.genoPlats[arrayIndex].imputationPanel==\"other\"",
-                    "items": [
-                      {
-                        "key": "genoPlats[].panelMonth"
-                      }
-                    ]
+                    "key": "genoPlats[].panelMonth"
                   }
                 ]
               },
@@ -846,8 +832,8 @@
                     "name": "t(study_taxonomy.vocabulary.genoPlats-referencePop.term.JPT.title)"
                   },
                   {
-                    "value": "JPT/CHB",
-                    "name": "t(study_taxonomy.vocabulary.genoPlats-referencePop.term.JPT/CHB.title)"
+                    "value": "JPT_CHB",
+                    "name": "t(study_taxonomy.vocabulary.genoPlats-referencePop.term.JPT_CHB.title)"
                   },
                   {
                     "value": "LWK",

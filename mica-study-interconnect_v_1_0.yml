@@ -27,7 +27,7 @@
     "fr": "Objectifs de l'étude."
   "terms": []
   "attributes":
-    "field": "objectives.und"
+    "field": "objectives"
     "alias": "objectives"
     "static": "true"
     "localized": "true"
@@ -61,7 +61,7 @@
       "en": "Case only"
       "fr": "Cas"
     "description":
-      "en": "Observational study that describes and investigates a population pesenting a specific disease or outcome (cases)."
+      "en": "Observational study that describes and investigates a population presenting a specific disease or outcome (cases)."
       "fr": "Étude observationnelle qui décrit et étudie une population présentant une maladie ou un résultat spécifique (cas)."
   - "name": "cross_sectional"
     "title":
@@ -102,7 +102,7 @@
     "en": "Investigator institution name."
     "fr": "Nom de l'institution de l'investigateur."
   "attributes":
-    "field": "memberships.investigator.person.institution.name.und"
+    "field": "memberships.investigator.person.institution.name"
     "alias": "memberships-investigator-person-institution-name"
     "static": "true"
     "localized": "true"
@@ -125,7 +125,7 @@
     "en": "Contact institution name."
     "fr": "Nom de l'institution du contact."
   "attributes":
-    "field": "memberships.contact.person.institution.name.und"
+    "field": "memberships.contact.person.institution.name"
     "alias": "memberships-contact-person-institution-name"
     "localized": "true"
 - "name": "populations-selectionCriteria-countriesIso"
@@ -1384,6 +1384,44 @@
       "en": "Zimbabwe"
       "fr": "Zimbabwe"
     "description": {}
+- "name": "populations-id"
+  "title":
+    "en": "Population ID"
+    "fr": "Identifiant d'une population"
+  "description":
+    "en": "A population's ID."
+    "fr": "L'identifiant d'une population."
+  "attributes":
+    "field": "populations.id"
+    "alias": "populations-id"
+    "static": "true"
+    "hidden": "true"
+- "name": "populations-name"
+  "title":
+    "en": "Population Name"
+    "fr": "Nom d'une population"
+  "description":
+    "en": "A population's name."
+    "fr": "Le nom d'une population."
+  "attributes":
+    "hidden": "true"
+    "field": "populations.name"
+    "alias": "populations-name"
+    "static": "true"
+    "localized": "true"
+- "name": "populations-description"
+  "title":
+    "en": "Population Description"
+    "fr": "Description d'une population"
+  "description":
+    "en": "A population's description."
+    "fr": "La description d'une population."
+  "attributes":
+    "hidden": "true"
+    "field": "populations.description"
+    "alias": "populations-description"
+    "static": "true"
+    "localized": "true"
 - "name": "populations-selectionCriteria-ageMin"
   "title":
     "en": "Selection criteria - Minimum age"
@@ -1457,6 +1495,7 @@
     "type": "integer"
     "field": "model.numberOfParticipants.participant.number"
     "alias": "model-numberOfParticipants-participant-range"
+    "range": "true"
   "terms":
     - "name": "*:1000"
       "title":
@@ -1560,7 +1599,7 @@
       "en": "Specific population"
       "fr": "Population spécifique"
     "description":
-      "en": "Participants are recruited rom a specific sub-population."
+      "en": "Participants are recruited from a specific sub-population."
       "fr": "Les participants sont recrutés à partir d'une sous-population spécifique."
   - "name": "exist_studies"
     "title":
@@ -1750,6 +1789,125 @@
       "fr": "Bases de données environnementales"
     "description":
       "en": "Administrative database containing information concerning natural or man-made environmental characteristics (e.g. air pollutants, weather, built environment)."
+- "name": "start"
+  "title":
+    "en": "Start year"
+    "fr": "Année de début"
+  "description":
+    "en": "Year in which the study has started."
+    "fr": "Année à laquelle l'étude a commencé."
+  "attributes":
+    "type": "integer"
+    "field": "model.startYear"
+    "alias": "model-startYear"
+- "name": "end"
+  "title":
+    "en": "End year"
+    "fr": "Année de fin"
+  "description":
+    "en": "Year in which the study has ended or will end."
+    "fr": "Année à laquelle l'étude a fini ou finira."
+  "attributes":
+    "type": "integer"
+    "field": "model.endYear"
+    "alias": "model-endYear"
+- "name": "populations-dataCollectionEvents-id"
+  "title":
+    "en": "Data Collection Event ID"
+    "fr": "Identifiant d'un événement de collecte de données"
+  "description":
+    "en": "A data collection event's ID."
+    "fr": "L'indentifiant d'un événement de collecte de données."
+  "attributes":
+    "hidden": "true"
+    "field": "populations.dataCollectionEvents.id"
+    "alias": "populations-dataCollectionEvents-id"
+    "static": "true"
+- "name": "populations-dataCollectionEvents-name"
+  "title":
+    "en": "Data Collection Event Name"
+    "fr": "Nom d'un événement de collecte de données"
+  "description":
+    "en": "A data collection event's name."
+    "fr": "Le nom d'un événement de collecte de données."
+  "attributes":
+    "field": "populations.dataCollectionEvents.name"
+    "alias": "populations-dataCollectionEvents-name"
+    "static": "true"
+    "hidden": "true"
+    "localized": "true"
+- "name": "populations-dataCollectionEvents-start"
+  "title":
+    "en": "Data Collection Event Start Date"
+    "fr": "Date de début d'un événement de collecte de données"
+  "description":
+    "en": "A data collection event's initiation date."
+    "fr": "La date de commencement d'un événement de collecte de données."
+  "attributes":
+    "hidden": "true"
+    "field": "populations.dataCollectionEvents.start.yearMonth"
+    "alias": "populations-dataCollectionEvents-start-yearMonth"
+    "static": "true"
+- "name": "populations-dataCollectionEvents-end"
+  "title":
+    "en": "Data Collection Event End Date"
+    "fr": "Date de fin d'un événement de collecte de données"
+  "description":
+    "en": "A data collection event's end date."
+    "fr": "La date de fin d'un événement de collecte de données."
+  "attributes":
+    "hidden": "true"
+    "field": "populations.dataCollectionEvents.end.yearMonth"
+    "alias": "populations-dataCollectionEvents-end-yearMonth"
+    "static": "true"
+- "name": "populations-dataCollectionEvents-description"
+  "title":
+    "en": "Data Collection Event Description"
+    "fr": "Description d'un événement de collecte de données"
+  "description":
+    "en": "A data collection event's description."
+    "fr": "La description d'un événement de collecte de données."
+  "attributes":
+    "hidden": "true"
+    "field": "populations.dataCollectionEvents.description"
+    "alias": "populations-dataCollectionEvents-description"
+    "static": "true"
+    "localized": "true"
+- "name": "className"
+  "title":
+    "en": "Type of Study"
+    "fr": "Type d'étude"
+  "description":
+    "en": "Type of study (e.g. study or harmonization)."
+    "fr": "Type de l'étude (par exemple, étude ou étude d'harmonisation)."
+  "terms":
+  - "name": "Study"
+    "title":
+      "en": "Individual"
+      "fr": "Individuelle"
+    "description":
+      "en": "An individual study"
+      "fr": "Une étude de collecte de données."
+  - "name": "HarmonizationStudy"
+    "title":
+      "en": "Harmonization"
+      "fr": "Harmonisation"
+    "description":
+      "en": "A harmonization study."
+      "fr": "Une étude d'harmonisation de données."
+  "attributes":
+    "static": "true"
+- "name": "harmonizationDesign"
+  "title":
+    "en": "Harmonization Study Design"
+    "fr": "Conception de l'étude d'harmonisation"
+  "description":
+    "en": "Harmonization Study Design."
+    "fr": "Conception de l'étude d'harmonisation."
+  "attributes":
+    "field": "model.harmonizationDesign"
+    "alias": "model-harmonizationDesign"
+    "localized": "true"
 - "name": "infoPublic"
   "title":
     "en": "Study verification"
@@ -1947,7 +2105,7 @@
     "field": "populations.model.selectionCriteria.areaResidence"
     "alias": "populations-model-selectionCriteria-areaResidence"
   "terms":
-  - "name": "urbanRural"
+  - "name": "urban_rural"
     "title":
       "en": "Urban and rural"
     "description":
@@ -1988,9 +2146,9 @@
       "en": "Study recruits migrants"
 - "name": "ethnicityRace-ethGroup"
   "title":
-    "en": "Ethnical and racial groups recruited to the study"
+    "en": "Ethnical and racial group recruited to the study"
   "description":
-    "en": "Ethnical and racial groups recruited to the study"
+    "en": "Ethnical and racial group recruited to the study"
   "attributes":
     "field": "model.ethnicityRace.ethGroup"
     "alias": "model-ethnicityRace-ethGroup"
@@ -2045,14 +2203,14 @@
       "en": "Other group"
     "description":
       "en": "Other group participants"
-- "name": "ethnicityRace-genotypingPlat"
+- "name": "genoPlats-genotypingPlat"
   "title":
     "en": "Genotyping platform"
   "description":
     "en": "Genotyping platform used"
   "attributes":
-    "field": "model.ethnicityRace.genotypingPlat"
-    "alias": "model-ethnicityRace-genotypingPlat"
+    "field": "model.genoPlats.genotypingPlat"
+    "alias": "model-genoPlats-genotypingPlat"
   "terms":
   - "name": "humanHap240"
     "title":
@@ -2144,21 +2302,21 @@
       "en": "HumanOmni1S"
     "description":
       "en": "HumanOmni1S"
-  - "name": "human1.2MDuoCustom"
+  - "name": "human1-2MDuoCustom"
     "title":
       "en": "Human1.2MDuoCustom"
     "description":
       "en": "Human1.2MDuoCustom"
-  - "name": "humanOmni2.5_4"
+  - "name": "humanOmni2-5_4"
     "title":
       "en": "HumanOmni2.5-4"
     "description":
       "en": "HumanOmni2.5-4"
-  - "name": "humanOmni2.5_8"
+  - "name": "humanOmni2-5_8"
     "title":
       "en": "HumanOmni2.5-8"
     "description":
-      "en": "HumanOmni2.5-8"
+      "en": "HumanOmni2-5-8"
   - "name": "humanOmni5_4"
     "title":
       "en": "HumanOmni5-4"
@@ -2214,7 +2372,7 @@
       "en": "Affymetrix 500K (Nsp and Sty Chips)"
     "description":
       "en": "Affymetrix 500K (Nsp and Sty Chips)"
-  - "name": "affymetrix_6.0"
+  - "name": "affymetrix_6-0"
     "title":
       "en": "Affymetrix 6.0 (1M chip)"
     "description":
@@ -2224,14 +2382,14 @@
       "en": "Other"
     "description":
       "en": "Other" 
-- "name": "ethnicityRace-imputationPanel"
+- "name": "genoPlats-imputationPanel"
   "title":
     "en": "Imputation panel"
   "description":
     "en": "Imputation panel used"
   "attributes":
-    "field": "model.ethnicityRace.imputationPanel"
-    "alias": "model-ethnicityRace-imputationPanel"
+    "field": "model.genoPlats.imputationPanel"
+    "alias": "model-genoPlats-imputationPanel"
   "terms":
   - "name": "1000G_P3_Oct_2014"
     "title":
@@ -2303,14 +2461,14 @@
       "en": "Other"
     "description":
       "en": "Other"
-- "name": "ethnicityRace-referencePop"
+- "name": "genoPlats-referencePop"
   "title":
     "en": "Reference population"
   "description":
     "en": "Reference population used"
   "attributes":
-    "field": "model.ethnicityRace.referencePop"
-    "alias": "model-ethnicityRace-referencePop"
+    "field": "model.genoPlats.referencePop"
+    "alias": "model-genoPlats-referencePop"
   "terms":
   - "name": "All"
     "title":
@@ -2367,7 +2525,7 @@
       "en": "JPT"
     "description":
       "en": "JPT"
-  - "name": "JPT/CHB"
+  - "name": "JPT_CHB"
     "title":
       "en": "JPT/CHB"
     "description":
